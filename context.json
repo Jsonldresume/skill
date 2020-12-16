@@ -1,0 +1,556 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"schema": "http://schema.org/",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"skill": "https://jsonldresume.org/schema#"
+	},
+	"@id": "",
+		"@graph": [
+			{
+				"@id": "skill:Level",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "For defining the level of learning or knowledge material or experience, such as educational or skill level",
+				"rdfs:label": "Level",
+				"rdfs:subClassOf": {
+					"@id": "schema:Enumeration"
+				}
+			},
+			{
+				"@id": "skill:Advanced",
+				"@type": "skill:Level",
+				"rdfs:comment": "An adavanced level course compared to education level.",
+				"rdfs:label": "Advanced"
+			},
+			{
+				"@id": "skill:Basic",
+				"@type": "skill:Level",
+				"rdfs:comment": "An Introductory level course compared to education level.",
+				"rdfs:label": "Basic"
+			},
+			{
+				"@id": "skill:EducationalLevel",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "For a given educational level. Basic is same as introductory.",
+				"rdfs:label": "EducationalLevel",
+				"rdfs:subClassOf": {
+					"@id": "skill:Level"
+				}
+			},
+			{
+				"@id": "skill:TravelPermit",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "Different types of a permit to stay or live in a country issued by governments to a person",
+				"rdfs:label": "Travel Permit",
+				"rdfs:subClassOf": {
+					"@id": "schema:Enumeration"
+				}
+			},
+			{
+				"@id": "skill:StudentPermit",
+				"@type": "skill:TravelPermit",
+				"rdfs:comment": "A permit issued in form of a permit to study in a foreign country that might come with a limited or full work permit",
+				"rdfs:label": "Student-Permit"
+			},
+			{
+				"@id": "skill:OpenWorkPermitFullTime",
+				"@type": "skill:TravelPermit",
+				"rdfs:comment": "A permit issued in form of a permit to work in any industry for any employer in a foreign country without limitation on number of hours that can be worked",
+				"rdfs:label": "Open Work-Permit Full-Time"
+			},
+			{
+				"@id": "skill:OpenWorkPermitPartTime",
+				"@type": "skill:TravelPermit",
+				"rdfs:comment": "A permit issued in form of a permit to work in any industry for any employer in a foreign country with limitation on number of hours that can be worked",
+				"rdfs:label": "Open Work-Permit Part-Time"
+			},
+			{
+				"@id": "skill:CloseWorkPermitFullTime",
+				"@type": "skill:TravelPermit",
+				"rdfs:comment": "A permit issued in form of a permit to work with limitations on employers for which one can work for in a foreign country without limitation on number of hours that can be worked",
+				"rdfs:label": "Close Work-Permit Full-Time"
+			},
+			{
+				"@id": "skill:BirthCitizenship",
+				"@type": "skill:TravelPermit",
+				"rdfs:comment": "Citizenship issud to a peron when they are born in a country",
+				"rdfs:label": "Birth Citizenship"
+			},
+			{
+				"@id": "skill:GrantedCitizenship",
+				"@type": "skill:TravelPermit",
+				"rdfs:comment": "Citizenship issud to a peron through other means than birth in a country",
+				"rdfs:label": "Granted Citizenship"
+			},
+			{
+				"@id": "skill:AssylumStatus",
+				"@type": "skill:TravelPermit",
+				"rdfs:comment": "Assylum Status and Refugee status",
+				"rdfs:label": "Assylum Status"
+			},
+			{
+				"@id": "skill:PermanentResidence",
+				"@type": "skill:TravelPermit",
+				"rdfs:comment": "A permit given to a person to live and work freely in a foreign country but is not citizenship",
+				"rdfs:label": "Permanent Residence"
+			},
+			{
+				"@id": "skill:SecurityClearance",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "Different types of a security clearance to access classified information issued by different organizations in a country, usually government, to a person",
+				"rdfs:label": "Travel Permit",
+				"rdfs:subClassOf": {
+					"@id": "schema:Enumeration"
+				}
+			},
+			{
+				"@id": "skill:None",
+				"@type": "skill:SecurityClearance",
+				"rdfs:comment": "No Security Clearance",
+				"rdfs:label": "None"
+			},
+			{
+				"@id": "skill:LowestClearance",
+				"@type": "skill:SecurityClearance",
+				"rdfs:comment": "Lowest level of security clearance is given to this person for a limited access to classified documents and information within a country",
+				"rdfs:label": "Lowest Level Of Security Clearance"
+			},
+			{
+				"@id": "skill:HighClearance",
+				"@type": "skill:SecurityClearance",
+				"rdfs:comment": "Any higher level of security clearance than lowest one, that is given to this person for more access to classified documents and information within a country",
+				"rdfs:label": "Higher Levels Of Security Clearance"
+			},
+			{
+				"@id": "skill:SensoryConditionEffect",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "Adverse effects that a sensory condition caused, for example caused by an accident, imposes on a person and require assistance or special care by another person or animal excluding those that require use of a device or tool,like eyeglasses, to be eliminated to a major extent",
+				"rdfs:label": "Sensory Condition Effect",
+				"rdfs:subClassOf": {
+					"@id": "schema:Enumeration"
+				}
+			},
+			{
+				"@id": "skill:ReducedWeightLifting",
+				"@type": "skill:SensoryConditionEffect",
+				"rdfs:comment": "Reduced ability to lift or move items while in a still position",
+				"rdfs:label": "Reduced Weight Lifting"
+			},
+			{
+				"@id": "skill:ReducedVision",
+				"@type": "skill:SensoryConditionEffect",
+				"rdfs:comment": "Reduced vision",
+				"rdfs:label": "Reduced Vision"
+			},
+			{
+				"@id": "skill:ReducedMobility",
+				"@type": "skill:SensoryConditionEffect",
+				"rdfs:comment": "Reduced mobility (run or walk)",
+				"rdfs:label": "Reduced Mobility"
+			},
+			{
+				"@id": "skill:ReducedHearing",
+				"@type": "skill:SensoryConditionEffect",
+				"rdfs:comment": "Reduced Hearing",
+				"rdfs:label": "Reduced Hearing"
+			},
+			{
+				"@id": "skill:LearningResourceType",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "Formats that a Learning resource can be presented in those",
+				"rdfs:label": "Learning Resource Type",
+				"rdfs:subClassOf": {
+					"@id": "schema:Enumeration"
+				}
+			},
+			{
+				"@id": "skill:Presentation",
+				"@type": "skill:LearningResourceType",
+				"rdfs:comment": "Presentation and instructor-led course",
+				"rdfs:label": "Presentation"
+			},
+			{
+				"@id": "skill:SelfStudy",
+				"@type": "skill:LearningResourceType",
+				"rdfs:comment": "Self-study course",
+				"rdfs:label": "Self-Study"
+			},
+			{
+				"@id": "skill:Research",
+				"@type": "skill:LearningResourceType",
+				"rdfs:comment": "Research-based and lab course",
+				"rdfs:label": "Research"
+			},
+			{
+				"@id": "skill:WorkCentric",
+				"@type": "skill:LearningResourceType",
+				"rdfs:comment": "Practical lab or internship based course",
+				"rdfs:label": "Work-Centric"
+			},
+			{
+				"@id": "skill:Resume",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "A Resume.",
+				"rdfs:label": "Resume"
+			},
+			{
+				"@id": "schema:owner",
+				"@type": "rdf:Property",
+				"rdfs:comment": "Owner of this resume",
+				"rdfs:label": "owner",
+				"schema:domainIncludes": {
+					"@id": "skill:Resume"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schma:Person"
+				}
+			},
+			{
+				"@id": "schema:sensoryConditions",
+				"@type": "rdf:Property",
+				"rdfs:comment": "Sensory Conditions that might affect the working condition of the owner",
+				"rdfs:label": "sensoryConditions",
+				"schema:domainIncludes": {
+					"@id": "skill:Resume"
+				},
+				"schema:rangeIncludes": {
+					"@id": "skill:SpecialCondition"
+				}
+			},
+			{
+				"@id": "skill:SpecialCondition",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "Special condition that has affectd a person's health permanently or temporarily",
+				"rdfs:label": "SpecialCondition",
+				"rdfs:subClassOf": {
+					"@id": "schema:Intangible"
+				}
+			},
+			{
+				"@id": "skill:name",
+				"@type": "rdf:Property",
+				"rdfs:label": "name",
+				"rdfs:comment": "name of special health condition that the person has",
+				"schema:domainIncludes": {
+					"@id": "skill:SpecialCondition"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Text"
+				}
+			},
+			{
+				"@id": "skill:description",
+				"@type": "rdf:Property",
+				"rdfs:label": "description",
+				"rdfs:comment": "description of special health condition that the person has",
+				"schema:domainIncludes": {
+					"@id": "skill:SpecialCondition"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Text"
+				}
+			},
+			{
+				"@id": "skill:startDate",
+				"@type": "rdf:Property",
+				"rdfs:label": "startDate",
+				"rdfs:comment": "Start date of special health condition that the person has. Can be a date in future or past",
+				"schema:domainIncludes": {
+					"@id": "skill:SpecialCondition"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Date"
+				}
+			},
+			{
+				"@id": "skill:endDate",
+				"@type": "rdf:Property",
+				"rdfs:label": "endDate",
+				"rdfs:comment": "End date of special health condition that the person has. Can be a date in future or past",
+				"schema:domainIncludes": {
+					"@id": "skill:SpecialCondition"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Date"
+				}
+			},
+			{
+				"@id": "skill:result",
+				"@type": "rdf:Property",
+				"rdfs:label": "result",
+				"rdfs:comment": "Result(effect on the body or mind) of special health condition that the person has.",
+				"schema:domainIncludes": {
+					"@id": "skill:SpecialCondition"
+				},
+				"schema:rangeIncludes": {
+					"@id": "skill:SensoryConditionEffect"
+				}
+			},
+			{
+				"@id": "skill:AwardType",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "Different types of a award that can be given to a person or organization",
+				"rdfs:label": "Award Type",
+				"rdfs:subClassOf": {
+					"@id": "schema:Enumeration"
+				}
+			},
+			{
+				"@id": "skill:Monetary",
+				"@type": "skill:AwardType",
+				"rdfs:comment": "A monetary award",
+				"rdfs:label": "Monetary"
+			},
+			{
+				"@id": "skill:Non-Monetary",
+				"@type": "skill:AwardType",
+				"rdfs:comment": "A non-monetary award",
+				"rdfs:label": "Non-Monetary"
+			},
+			{
+				"@id": "schema:award",
+				"@type": "rdf:Property",
+				"rdfs:comment": "Awards won by or for this item.",
+				"rdfs:label": "award",
+				"schema:domainIncludes": {
+					"@id": "skill:Resume"
+				},
+				"schema:rangeIncludes": {
+					"@id": "skill:Award"
+				}
+			},
+			{
+				"@id": "skill:title",
+				"@type": "rdf:Property",
+				"rdfs:label": "title",
+				"rdfs:comment": "title of the award.",
+				"schema:domainIncludes": {
+					"@id": "skill:Award"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Text"
+				}
+			},
+			{
+				"@id": "skill:date",
+				"@type": "rdf:Property",
+				"rdfs:label": "date",
+				"rdfs:comment": "date the award was or is planned to be won.",
+				"schema:domainIncludes": {
+					"@id": "skill:Award"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Date"
+				}
+			},
+			{
+				"@id": "skill:awardedBy",
+				"@type": "rdf:Property",
+				"rdfs:label": "awardedBy",
+				"rdfs:comment": "the organization or person who awarded it.",
+				"schema:domainIncludes": {
+					"@id": "skill:Award"
+				},
+				"schema:rangeIncludes": [
+					{
+						"@id": "schema:Person"
+					},
+					{
+						"@id": "schema:Organization"
+					}
+				]
+			},
+			{
+				"@id": "skill:awardedForReason",
+				"@type": "rdf:Property",
+				"rdfs:label": "awardedForReason",
+				"rdfs:comment": "The creative work or event that was the main reason this awrd was given.",
+				"schema:domainIncludes": {
+					"@id": "skill:Award"
+				},
+				"schema:rangeIncludes": [
+					{
+						"@id": "schema:CreativeWork"
+					},
+					{
+						"@id": "schema:Event"
+					}
+				]
+			},
+			{
+				"@id": "skill:awardType",
+				"@type": "rdf:Property",
+				"rdfs:label": "awardType",
+				"rdfs:comment": "The type of award",
+				"schema:domainIncludes": {
+					"@id": "skill:Award"
+				},
+				"schema:rangeIncludes": [
+					{
+						"@id": "skill:AwardType"
+					}
+				]
+			},
+			{
+				"@id": "skill:description",
+				"@type": "rdf:Property",
+				"rdfs:label": "description",
+				"rdfs:comment": "description of the award.",
+				"schema:domainIncludes": {
+					"@id": "skill:Award"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Text"
+				}
+			},
+			{
+				"@id": "skill:sameAs",
+				"@type": "rdf:Property",
+				"rdfs:label": "sameAs",
+				"rdfs:comment": "URL of the award.",
+				"schema:domainIncludes": {
+					"@id": "skill:Award"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:URL"
+				}
+			},
+			{
+				"@id": "schema:eligibililtyToWork",
+				"@type": "rdf:Property",
+				"rdfs:comment": "Permits that make the person or organization eligible to work in different cuntries",
+				"rdfs:label": "eligibililtyToWork",
+				"schema:domainIncludes": {
+					"@id": "skill:Resume"
+				},
+				"schema:rangeIncludes": {
+					"@id": "skill:WorkEligibility"
+				}
+			},
+			{
+				"@id": "skill:WorkEligibility",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "Elignility to work in a country",
+				"rdfs:label": "WorkEligibility",
+				"rdfs:subClassOf": {
+					"@id": "schema:Intangible"
+				}
+			},
+			{
+				"@id": "skill:securityClearance",
+				"@type": "rdf:Property",
+				"rdfs:label": "securityClearance",
+				"rdfs:comment": "Security clearance that the person or organization holds.",
+				"schema:domainIncludes": {
+					"@id": "skill:WorkEligibility"
+				},
+				"schema:rangeIncludes": {
+					"@id": "skill:SecurityClearance"
+				}
+			},
+			{
+				"@id": "skill:throughPermit",
+				"@type": "rdf:Property",
+				"rdfs:label": "throughPermit",
+				"rdfs:comment": "The permit through which the person is allowed to work or stay in a country.",
+				"schema:domainIncludes": {
+					"@id": "skill:WorkEligibility"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:GovernmentPermit"
+				}
+			},
+			{
+				"@id": "schema:lookingForJob",
+				"@type": "rdf:Property",
+				"rdfs:comment": "Job types that the person is looking for",
+				"rdfs:label": "lookingForJob",
+				"schema:domainIncludes": {
+					"@id": "skill:Resume"
+				},
+				"schema:rangeIncludes": {
+					"@id": "skill:JobApplication"
+				}
+			},
+			{
+				"@id": "skill:JobApplication",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "Job application details from job seeker perspective",
+				"rdfs:label": "JobApplication",
+				"rdfs:subClassOf": {
+					"@id": "schema:Intangible"
+				}
+			},
+			{
+				"@id": "skill:requireAdvacneNotice",
+				"@type": "rdf:Property",
+				"rdfs:label": "requireAdvacneNotice",
+				"rdfs:comment": "The time an employer must give the person to allow that person enough time to start the job",
+				"schema:domainIncludes": {
+					"@id": "skill:JobApplication"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Duration"
+				}
+			},
+			{
+				"@id": "skill:passiveJobSeeker",
+				"@type": "rdf:Property",
+				"rdfs:label": "passiveJobSeeker",
+				"rdfs:comment": "Is job seeker passive in the serach?",
+				"schema:domainIncludes": {
+					"@id": "skill:JobApplication"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Boolean"
+				}
+			},
+			{
+				"@id": "skill:withCoverLetter",
+				"@type": "rdf:Property",
+				"rdfs:label": "withCoverLetter",
+				"rdfs:comment": "Cover letter for this resume",
+				"schema:domainIncludes": {
+					"@id": "skill:JobApplication"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Text"
+				}
+			},
+			{
+				"@id": "skill:jobPosting",
+				"@type": "rdf:Property",
+				"rdfs:label": "jobPosting",
+				"rdfs:comment": "Job posting details the person is looking for",
+				"schema:domainIncludes": {
+					"@id": "skill:JobApplication"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:JobPosting"
+				}
+			},
+			{
+				"@id": "skill:Terms",
+				"@type": "rdfs:Class",
+				"rdfs:comment": "All terms that will be used in the resume and person",
+				"rdfs:label": "Terms",
+				"rdfs:subClassOf": {
+					"@id": "schema:Thing"
+				}
+			},
+			{
+				"@id": "skill:relatedTo",
+				"@type": "rdf:Property",
+				"rdfs:label": "relatedTo",
+				"rdfs:comment": "All terms that will be used in the resume and person",
+				"schema:domainIncludes": {
+					"@id": "skill:Terms"
+				},
+				"schema:rangeIncludes": {
+					"@id": "schema:Thing"
+				}
+			}
+		]
+}
