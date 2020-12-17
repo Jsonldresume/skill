@@ -1,0 +1,1174 @@
+{
+	"@context": "https://raw.githubusercontent.com/Jsonldresume/skill/main/context.json",
+	"@graph": [
+		{
+			"@id": "https://johndoe.github.io/resume/",
+			"@type": "skill:Resume",
+			"owner": {
+				"@id": "https://johndoe.github.io"
+			},
+			"sensoryConditions": [
+				{
+					"@id": "_:resume_sensoryConditions1",
+					"@type": "skill:SpecialCondition",
+					"name": "deafness",
+					"description": "",
+					"startDate": "",
+					"endDate": "",
+					"result": [
+						"skill:ReducedHearing"
+					]
+				}
+			],
+			"award": [
+				{
+					"@type": "skill:Award",
+					"@id": "_:resume_award1",
+					"title": "Award",
+					"date": "2020-01-01",
+					"awardedBy": [
+						{
+							"@type": "Organization",
+							"id": "Direction-X"
+						},
+						{
+							"@type": "Person"
+						}
+					],
+					"awardedForReason": [
+						{
+							"@type": "CreativeWork",
+							"@id": ":_creativeWork1"
+						},
+						{
+							"@type": "Event"
+						}
+					],
+					"awardType": {
+						"@type": "DefinedTerm",
+						"termCode": "Monetary",
+						"name": "Nobel Prize",
+						"inDefinedTermSet": "https://en.wikipedia.org/wiki/List_of_jobs"
+					},
+					"description": "",
+					"sameAs": ""
+				}
+			],
+			"eligibililtyToWork": [
+				{
+					"@id": "_:resume_eligibililtyToWork1",
+					"@type": "skill:WorkEligibility",
+					"securityClearance": "skill:NoClearance",
+					"throughPermit": {
+						"@type": "GovernmentPermit",
+						"@id": "_:resume_eligibililtyToWork1_throughPermit",
+						"issuedThrough": {
+							"@id": "_:eligibililtyToWork1_throughPermit_issuedThrough",
+							"@type": "Service",
+							"category": "skill:OpenWorkPermitFullTime"
+						},
+						"validFrom": "2006-01-01",
+						"validUntil": "2009-01-01",
+						"validFor": "P3Y",
+						"validIn": [
+							{
+								"@id": "_:resume_eligibililtyToWork1_throughPermit_validIn1",
+								"@type": "AdministrativeArea",
+								"address": {
+									"@id": "_:personal_Canada"
+								}
+							}
+						]
+					}
+				}
+			],
+			"lookingForJob": [
+				{
+					"@id": "_:resume_lookingForJob1",
+					"@type": "skill:JobApplication",
+					"requireAdvacneNotice": "P14D",
+					"passiveJobSeeker": true,
+					"withCoverLetter": "This is cover letter that person writes for this job search",
+					"jobPosting": {
+						"@id": "_:resume_jobPosting1",
+						"@type": "JobPosting",
+						"title": "Anayst",
+						"jobLocation": [
+							{
+								"@id": "_:resume_lookingForJob1_jobPosting1",
+								"@type": "Place",
+								"address": {
+									"@id": "_:resume_lookingForJob1_jobPosting1_address1",
+									"@type": "PostalAddress",
+									"addressCountry": "CA",
+									"addressRegion": "Ontario",
+									"addressLocality": "Toronto"
+								}
+							}
+						],
+						"baseSalary": {
+							"@id": "_:resume_jobPosting1_baseSalary",
+							"@type": "MonetaryAmount",
+							"currency": "CAD",
+							"minValue": 50000,
+							"maxValue": 100000
+						},
+						"employmentType": [
+							"full-time"
+						],
+						"hiringOrganization": [
+							{
+								"@id": "_:resume_jobPosting1_hiringOrganization1",
+								"@type": "Organization",
+								"description": "name or size or industry you want to be employed at",
+								"location": {
+									"@id": "_:resume_jobPosting1_hiringOrganization1_address1",
+									"@type": "PostalAddress",
+									"addressCountry": "CA",
+									"addressRegion": "Ontario",
+									"addressLocality": "Toronto"
+								},
+								"nonprofitStatus": "Nonprofit",
+								"numberOfEmployees": {
+									"@id": "_:resume_jobPosting1_hiringOrganization1_numberOfEmployees",
+									"@type": "QuantitativeValue",
+									"minValue": 5,
+									"maxValue": 10,
+									"unitText": "person"
+								},
+								"review": {
+									"@id": "_:resume_jobPosting1_hiringOrganization1_review",
+									"@type": "Review",
+									"reviewBody": [
+										"Glassdoor",
+										"Indeed"
+									],
+									"reviewRating": {
+										"@id": "_:resume_jobPosting1_hiringOrganization1_review_reviewRating",
+										"@type": "Rating",
+										"worstRating": 1,
+										"bestRating": 5,
+										"ratingExplanation": "rating the company received"
+									}
+								},
+								"legalName": "",
+								"name": ""
+							}
+						],
+						"industry": [
+							{
+								"@id": "_:resume_jobPosting1_industry1",
+								"@type": "DefinedTerm",
+								"termCode": "C1934-GL",
+								"name": "Global Cosmetics Manufacturing",
+								"inDefinedTermSet": "https://www.ibisworld.com/global/list-of-industries/"
+							}
+						],
+						"jobStartDate": "2021-01-01",
+						"occupationalCategory": [
+							{
+								"@id": "_:resume_jobPosting1_occupationalCategory1",
+								"@type": "CategoryCode",
+								"codeValue": "15-1251",
+								"name": "Computer Programmers",
+								"inCodeSet": "https://www.bls.gov/soc/2018/major_groups.htm"
+							}
+						],
+						"physicalRequirement": [
+							{
+								"@id": "_:resume_jobPosting1_physicalRequirement1",
+								"@type": "CategoryCode",
+								"codeValue": "15-1251",
+								"name": "Coaching and Developing Others ",
+								"inCodeSet": "https://www.onetonline.org/"
+							}
+						],
+						"workHours": [
+							"night shift",
+							"8am-12pm"
+						],
+						"url": "https://job-url-if-specific"
+					}
+				}
+			],
+			"workHistory": [
+				{
+					"@id": "_:workHistory1",
+					"@type": "skill:Employment",
+					"workOrganization": {
+						"@type": "Organization",
+						"@id": "Direction-X"
+					},
+					"workArea": {
+						"@type": "AdministrativeArea"
+					},
+					"remotePosition": false,
+					"inLanguage": [
+						{
+							"@id": "_:languageEnglish"
+						}
+					],
+					"workExample": [
+						{
+							"@id": "_resume_workExample1",
+							"@type": "CreativeWork"
+						}
+					],
+					"hasOccupation": {
+						"@type": "OrganizationRole",
+						"roleName": "Programmer",
+						"name": "Lead Programmer",
+						"description": "",
+						"baseSalary": {
+							"@id": "_:hasOccupation2_baseSalary",
+							"@type": "MonetaryAmount",
+							"currency": "CAD",
+							"value": 0
+						},
+						"hasOccupation": {
+							"@id": "_:hasOccupation2_hasOccupation",
+							"@type": "Occupation",
+							"name": "Occupation 2",
+							"estimatedSalary": {
+								"@id": "_:hasOccupation2_hasOccupation_estimatedSalary",
+								"@type": "MonetaryAmountDistribution",
+								"name": "estimate",
+								"duration": "P1Y",
+								"currency": "USD",
+								"percentile10": 72000,
+								"percentile25": 86000,
+								"median": 109000,
+								"percentile75": 120000,
+								"percentile90": 140000
+							},
+							"occupationLocation": {
+								"@id": "_:hasOccupation2_hasOccupation_occupationLocation",
+								"@type": "Country",
+								"name": "USA"
+							},
+							"occupationalCategory": {
+								"@id": "_:hasOccupation2_hasOccupation_occupationalCategory",
+								"@type": "CategoryCode",
+								"codeValue": "15-1251",
+								"name": "Computer Programmers",
+								"inCodeSet": "https://www.bls.gov/soc/2018/major_groups.htm"
+							},
+							"responsibilities": [
+								"Analysing systems"
+							],
+							"skills": [
+								{
+									"@id": "_:PHP"
+								}
+							]
+						},
+						"startDate": "2012",
+						"endDate": "2018"
+					}
+				}
+			],
+			"colleague": [
+				{
+					"@id": "_:resume_colleague1",
+					"@type": "skill:Colleague",
+					"member": {
+						"@id": "_:resume_colleague1_member",
+						"@type": "Person"
+					},
+					"teamedFor": [
+						{
+							"@type": "skill:Teammember",
+							"position": "skill:Manager or Text",
+							"work": {
+								"@id": "_resume_workExample1"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"@id": "https://johndoe.github.io",
+			"@type": "Person",
+			"givenName": [
+				"John"
+			],
+			"additionalName": [
+				"middle"
+			],
+			"familyName": [
+				"Doe"
+			],
+			"honorificPrefix": [
+				"Dr"
+			],
+			"birthDate": "--01-01",
+			"birthPlace": {
+				"@id": "_:birthPlace",
+				"@type": "Place",
+				"address": {
+					"@id": "_:personal_US"
+				}
+			},
+			"nationality": [
+				"US"
+			],
+			"height": {
+				"@id": "_:height",
+				"@type": "QuantitativeValue",
+				"unitCode": "ft",
+				"value": "7"
+			},
+			"weight": {
+				"@id": "_:weight",
+				"@type": "QuantitativeValue",
+				"unitCode": "kg",
+				"value": "68"
+			},
+			"contactPoint": [
+				{
+					"@id": "_:contactPoint1",
+					"@type": "ContactPoint",
+					"contactType": "Preferred",
+					"email": "john.Doe.primary@jsonldresume.org",
+					"telephone": "111-111-1111",
+					"availableLanguage": {
+						"@id": "_:languageEnglish"
+					},
+					"faxNumber": "100-000-0000",
+					"hoursAvailable": [
+						{
+							"@id": "_:contactPoint1_hoursAvailable1",
+							"@type": "OpeningHoursSpecification",
+							"opens": "09:00:00",
+							"closes": "20:00:00",
+							"dayOfWeek": [
+								"schema:Saturday",
+								"schema:Sunday"
+							],
+							"validFrom": "",
+							"validThrough": ""
+						}
+					]
+				},
+				{
+					"@id": "_:contactPoint2",
+					"@type": "ContactPoint",
+					"contactType": "Emergency",
+					"email": "john.Doe.emergency@jsonldresume.org",
+					"telephone": "222-222-2222",
+					"availableLanguage": {
+						"@id": "_:languageEnglish"
+					}
+				}
+			],
+			"address": [
+				{
+					"@id": "_:pesonal_US"
+				},
+				{
+					"@id": "_:personal_Canada"
+				}
+			],
+			"gender": "Male",
+			"image": [
+				{
+					"@id": "_:image1",
+					"@type": "ImageObject",
+					"contentUrl": "https://static.wikia.nocookie.net/unidentified/images/7/73/UP_12012.JPG/revision/latest/scale-to-width-down/259?cb=20151216214935",
+					"abstract": "Image of person",
+					"associatedMedia": [
+						{
+							"@id": "_:image1_associatedMedia1",
+							"@type": "MediaObject",
+							"contentUrl": "https://static.projectmanagement.com/images/profile-photos/46843803.mov",
+							"abstract": "Video of person introducing themself e.g in a video resume"
+						}
+					]
+				}
+			],
+			"jobTitle": [
+				{
+					"@id": "_:jobTitle1",
+					"@type": "DefinedTerm",
+					"termCode": "15-1211",
+					"name": "Computer Systems Analysts",
+					"inDefinedTermSet": "https://www.bls.gov/soc/2018/major_groups.htm"
+				}
+			],
+			"hasCredential": [
+				{
+					"@id": "_:hasCredential1",
+					"@type": "EducationalOccupationalCredential",
+					"aggregateRating": {
+						"@id": "_:hasCredential1_aggregateRating",
+						"@type": "aggregateRating",
+						"ratingExplanation": "Converted to a 4 scale on 2 courses",
+						"ratingCount": 2,
+						"bestRating": 4,
+						"worstRating": 0,
+						"ratingValue": "3.51",
+						"name": "GPA",
+						"itemReviewed": {
+							"@id": "_:hasCredential1"
+						}
+					},
+					"credentialCategory": "degree",
+					"educationalLevel": "Master of Science",
+					"abstract": "Master of Science in Computer Science",
+					"inLanguage": [
+						{
+							"@id": "_:languageEnglish"
+						}
+					],
+					"dateCreated": "2010-05--",
+					"about": {
+						"@id": "_:hasCredential1_about",
+						"@type": "EducationalOccupationalProgram",
+						"name": "Master of Science in Electrical Engineering at University of Colorado at Boulder",
+						"description": "Master of Science in Electrical Engineering at University of Colorado at Boulder",
+						"identifier": {
+							"@id": "_:hasCredential1_about_identifier",
+							"@type": "PropertyValue",
+							"propertyID": "ProgramID",
+							"value": "889647468"
+						},
+						"occupationalCategory": {
+							"@id": "_:hasCredential1_about_occupationalCategory",
+							"@type": "CategoryCode",
+							"codeValue": "15-1251",
+							"name": "Computer Programmers",
+							"inCodeSet": "https://www.bls.gov/soc/2018/major_groups.htm"
+						},
+						"educationalProgramMode": "online",
+						"programType": "classroom",
+						"startDate": "2007-01-01",
+						"endDate": "2010-01-01",
+						"timeToComplete": "P2Y0M0D",
+						"numberOfCredits": 32,
+						"applicationStartDate": "2005-12-01",
+						"applicationDeadline": "2006-01-01",
+						"termDuration": "P4M",
+						"termsPerYear": 2,
+						"programPrerequisites": {
+							"@id": "_:hasCredential1_about_programPrerequisites",
+							"@type": "EducationalOccupationalCredential",
+							"credentialCategory": "High school diploma"
+						},
+						"provider": {
+							"@id": "_:hasCredential1_about_provider",
+							"@type": "CollegeOrUniversity",
+							"name": "ACME Community College",
+							"alternateName": "ACC-NY",
+							"address": {
+								"@id": "_:hasCredential1_about_provider_address",
+								"@type": "PostalAddress",
+								"streetAddress": "123 Main Street",
+								"addressLocality": "New York",
+								"addressRegion": "NY",
+								"addressCountry": "US",
+								"postalCode": "H1H1H1"
+							},
+							"contactPoint": [
+								{
+									"@id": "_:hasCredential1_about_provider_contactPoint1",
+									"@type": "schema:ContactPoint",
+									"contactType": "admissions",
+									"contactOption": "TollFree",
+									"telephone": "111-111-1111",
+									"email": "info@acme.edu"
+								}
+							],
+							"department": {
+								"@id": "_:hasCredential1_about_provider_department",
+								"@type": "CollegeOrUniversity",
+								"name": "Computer Science"
+							}
+						},
+						"hasCourse": [
+							{
+								"@id": "_:hasCredential1_about_hasCourse1",
+								"@type": "Course",
+								"name": "Algorithm",
+								"description": "course description",
+								"provider": {
+									"@id": "_:hasCredential1_about_provider",
+									"disambiguatingDescription": "this can also be a different univerity/provider if student has taken courses somewhere else and can have all properties again"
+								},
+								"courseCode": "A001",
+								"numberOfCredits": 4,
+								"inLanguage": [
+									{
+										"@id": "_:languageEnglish"
+									}
+								],
+								"creator": [
+									{
+										"@id": "_:hasCredential1_about_hasCourse1_creator1",
+										"@type": "Person",
+										"name": "instructor(s) who teached this course. We can add as much detail about this person that we have here. Some courses mught have more tatn one instructor"
+									}
+								],
+								"learningResourceType": [
+									"skill:Presentation"
+								],
+								"abstract": "This course is designed to give the student an advacned understanding of algorithms",
+								"aggregateRating": {
+									"@id": "_:hasCredential1_about_hasCourse1_aggregateRating",
+									"@type": "AggregateRating",
+									"itemReviewed": {
+										"@id": "_:hasCredential1_about_hasCourse1"
+									},
+									"ratingExplanation": "Converted to a 4 scale",
+									"ratingCount": 2,
+									"bestRating": 4,
+									"worstRating": 1,
+									"ratingValue": 3.5
+								},
+								"educationalLevel": "skill:Advanced",
+								"teaches": [
+									{
+										"@id": "_:PHP",
+										"@type": "DefinedTerm",
+										"termCode": "PHP",
+										"name": "PHP",
+										"inDefinedTermSet": "https://en.wikipedia.org/wiki/List_of_programming_languages"
+									}
+								],
+								"workExample": [
+									{
+										"@id": "_:hasCredential1_about_hasCourse1_workExample1",
+										"@type": "CreativeWork",
+										"name": "Project 1",
+										"description": "Project or activity that was done during this course if any. This can be any sub-type of CreativeWork and have any property defined in schema.org for CreativeWork"
+									}
+								],
+								"educationalAlignment": [
+									{
+										"@id": "_:hasCredential1_about_hasCourse1_educationalAlignment1",
+										"@type": "AlignmentObject",
+										"alignmentType": "educationalSubject",
+										"educationalFramework": "Basics of Algorithm",
+										"targetName": "This is curricula of the course. Algorith history: history of past events and algorithms",
+										"targetUrl": "http://example.org/CFE/subjects/3362"
+									},
+									{
+										"@id": "_:hasCredential1_about_hasCourse1_educationalAlignment2",
+										"@type": "AlignmentObject",
+										"alignmentType": "educationalSubject",
+										"educationalFramework": "Algorithm Usage",
+										"targetName": "Application of algorithm",
+										"targetUrl": "http://example.org/ENC/subjects/3102"
+									}
+								]
+							}
+						],
+						"offers": [
+							{
+								"@id": "_:hasCredential1_about_offers1",
+								"@type": "Offer",
+								"category": "Room and Board",
+								"name": "Room and Board",
+								"description": "This is any offers the educational institute has provided, like grants",
+								"priceSpecification": {
+									"@id": "_:hasCredential1_about_offers1_priceSpecification",
+									"@type": "PriceSpecification",
+									"price": 16278,
+									"priceCurrency": "USD"
+								},
+								"offeredBy": {
+									"@id": "_:hasCredential1_about_provider",
+									"disambiguatingDescription": "this can be either the institution or the work company, whichever funded it or a whole new Organization or Person"
+								}
+							},
+							{
+								"@id": "_:hasCredential1_about_offers2",
+								"@type": "Offer",
+								"category": "International Tuition",
+								"priceSpecification": {
+									"@id": "_:hasCredential1_about_offers2_priceSpecification",
+									"@type": "PriceSpecification",
+									"price": 37344,
+									"priceCurrency": "USD"
+								}
+							}
+						]
+					},
+					"recognizedBy": {
+						"@id": "_:hasCredential1_about_provider"
+					},
+					"workExample": [
+						{
+							"@id": "_:hasCredential1_workExample1",
+							"@type": "CreativeWork",
+							"abstract": "Projects done in this education that might not be described in the courses, can be CreativeWork and any sub-type of it",
+							"contributor": [
+								{
+									"@id": "_:colleague1"
+								}
+							],
+							"hasPart": [
+								{
+									"@id": "_:hasCredential1_workExample1_hasPart1",
+									"@type": "CreativeWork",
+									"abstract": "Sub-tasks of this project, which is also used to defined skills learned in it",
+									"teaches": [
+										{
+											"@id": "_:PHP"
+										}
+									]
+								}
+							],
+							"inLanguage": [
+								{
+									"@id": "_:languageEnglish"
+								}
+							]
+						}
+					]
+				}
+			],
+			"knowsLanguage": [
+				{
+					"@id": "_:languageEnglish"
+				}
+			],
+			"memberOf": [
+				{
+					"@id": "_:memberOf1",
+					"@type": "ProgramMembership",
+					"url": "https://www.pmac-agpc.ca/members",
+					"programName": "PMI",
+					"description": "This is project management professional group",
+					"hostingOrganization": {
+						"@id": "_:memberOf1_hostingOrganization",
+						"@type": "Organization",
+						"url": "https://www.pmi.org/",
+						"name": "Project Management Association of Canada (PMAC-AGPC)",
+						"address": {
+							"@id": "_:memberOf1_hostingOrganization_address",
+							"@type": "PostalAddress",
+							"addressCountry": "Canada",
+							"addressRegion": "Québec",
+							"addressLocality": "Gatineau",
+							"streetAddress": "unit 2-140 boulevard Gréber",
+							"postalCode": "J8T 6H5"
+						}
+					},
+					"mainEntityOfPage": {
+						"@id": "_:memberOf1_mainEntityOfPage",
+						"@type": "EducationalOccupationalCredential",
+						"name": "Project Management Professional",
+						"alternateName": [
+							"PMI-PMP"
+						],
+						"educationalLevel": "skill:Advanced",
+						"expires": "2020-01-01",
+						"dateCreated": "2019-01-01",
+						"assesses": [
+							{
+								"@id": "_:Project Management",
+								"@type": "DefinedTerm",
+								"termCode": "Project Management",
+								"name": "Project Management",
+								"inDefinedTermSet": "https://en.wikipedia.org/wiki/Project_management"
+							}
+						]
+					}
+				},
+				{
+					"@id": "_:memberOf2",
+					"@type": "ProgramMembership",
+					"url": "https://www.fit4less.ca/members",
+					"programName": "Gold Membership",
+					"description": "This is Gym membership",
+					"hostingOrganization": {
+						"@id": "_:memberOf2_hostingOrganization",
+						"@type": "Organization",
+						"url": "https://www.fit4less.ca/",
+						"name": "Fit4Less",
+						"address": {
+							"@id": "_:memberOf2_hostingOrganization_address",
+							"@type": "PostalAddress",
+							"addressCountry": "Canada",
+							"addressRegion": "Québec",
+							"addressLocality": "Gatineau",
+							"streetAddress": "unit 2-140 boulevard Gréber",
+							"postalCode": "J8T 6H5"
+						}
+					},
+					"mainEntityOfPage": {
+						"@id": "_:memberOf2_mainEntityOfPage",
+						"@type": "ExercisePlan",
+						"name": "Gym",
+						"alternateName": [
+							"other names of this program"
+						],
+						"educationalLevel": "skill:Introductory",
+						"expires": "2021-01-01",
+						"dateCreated": "2020-01-01",
+						"assesses": [
+							{
+								"@id": "_:Fitness",
+								"@type": "DefinedTerm",
+								"termCode": "Fitness",
+								"name": "Fitness",
+								"inDefinedTermSet": "https://en.wikipedia.org/wiki/fitness"
+							}
+						]
+					}
+				}
+			],
+			"interactionStatistic": [
+				{
+					"@id": "_:interactionStatistic1",
+					"@type": "InteractionCounter",
+					"interactionService": {
+						"@id": "_:interactionStatistic1_interactionService",
+						"@type": "WebSite",
+						"issn": "linkedin",
+						"name": "linkedIn.com",
+						"description": "LinkedIn Programming",
+						"url": "https://linkedin.com"
+					},
+					"userInteractionCount": 1,
+					"url": "https://linkedin.com",
+					"description": "",
+					"interactionType": [
+						{
+							"@id": "_:interactionStatistic1_interactionType1",
+							"@type": "Action",
+							"startTime": "2000-01-01",
+							"endTime": "2000-01-01",
+							"description": "published a post",
+							"location": "https://linkedin.com/post-url",
+							"object": {
+								"@id": "_:interactionStatistic1_interactionType1_object",
+								"@type": "Article"
+							},
+							"instrument": {
+								"@id": "_:interactionStatistic1_interactionType1_instrument",
+								"@type": "SoftwareApplication",
+								"name": "Android",
+								"availableOnDevice": "LG Phone",
+								"downloadUrl": "https://linkedin.com",
+								"operatingSystem": "Android"
+							},
+							"result": [
+								{
+									"@id": "_:interactionStatistic1_interactionType1_result1",
+									"@type": "Article",
+									"associatedMedia": [
+										{
+											"@id": "_:interactionStatistic1_interactionType1_result1_associatedMedia1",
+											"@type": "MediaObject",
+											"abstract": ""
+										}
+									],
+									"teaches": [
+										{
+											"@id": "_:PHP"
+										}
+									],
+									"assesses": [],
+									"inLanguage": [
+										{
+											"@id": "_:languageEnglish"
+										}
+									]
+								}
+							],
+							"target": {
+								"@type": "EntryPoint",
+								"actionApplication": "LinkedIn",
+								"actionPlatform": "online"
+							},
+							"actionStatus": "CompletedActionStatus"
+						},
+						{
+							"@type": "Action",
+							"startTime": "2000-01-01",
+							"description": "endorse",
+							"location": ""
+						},
+						{
+							"@type": "Action",
+							"startTime": "2020-01-01",
+							"endTime": "2020-01-01",
+							"description": "liked post",
+							"location": "post-url or address",
+							"object": {
+								"@type": "Person"
+							},
+							"instrument": {},
+							"result": [
+								{
+									"@type": "CreativeWork",
+									"associatedMedia": [
+										{
+											"@type": "MediaObject",
+											"abstract": ""
+										}
+									],
+									"teaches": [],
+									"assesses": []
+								}
+							]
+						},
+						{
+							"@type": "Action",
+							"description": "endorse",
+							"location": "post-url or phsical location",
+							"object": {
+								"@id": "_:EducationProject1"
+							},
+							"result": [
+								{
+									"@type": "CreativeWork",
+									"associatedMedia": [
+										{
+											"@type": "MediaObject",
+											"abstract": ""
+										}
+									],
+									"teaches": [],
+									"assesses": [
+										{
+											"@type": "DefinedTerm",
+											"@id": "_:PHP"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"performerIn": [
+				{
+					"@id": "_:performerIn1",
+					"@type": "Event",
+					"description": "Projects done",
+					"location": {
+						"@id": "_:performerIn1_location",
+						"@type": "Place",
+						"address": {
+							"@id": "_:performerIn1_location_address",
+							"@type": "PostalAddress",
+							"addressCountry": "CA"
+						}
+					},
+					"name": "project name",
+					"about": {},
+					"funder": [
+						{
+							"@id": "Direction-X"
+						}
+					],
+					"startDate": "2020-01-01"
+				},
+				{
+					"@id": "_:performerIn2",
+					"@type": "PublicationEvent",
+					"description": "Publications or Conferences",
+					"publishedBy": {
+						"@id": "_:performerIn2_publishedBy",
+						"@type": "Organization",
+						"name": "IEEE"
+					},
+					"startDate": "2020-01-01",
+					"audience": [
+						{
+							"@id": "_:performerIn2_audience1",
+							"@type": "Researcher",
+							"audienceType": "university professors",
+							"name": "audience of conference"
+						}
+					],
+					"eventAttendanceMode": "online",
+					"isAccessibleForFree": true,
+					"workPerformed": {
+						"@id": "_:performerIn2_workPerformed",
+						"@type": "CreativeWork",
+						"headline": "article headline",
+						"abstract": "",
+						"inLanguage": [
+							{
+								"@id": "_:languageEnglish"
+							}
+						],
+						"associatedMedia": [],
+						"contentRating": {
+							"@id": "_:performerIn2_workPerformed_contentRating",
+							"@type": "Rating",
+							"bestRating": "number or text",
+							"worstRating": "number or text",
+							"ratingExplanation": "",
+							"ratingValue": "",
+							"author": {
+								"@id": "_:performerIn2_workPerformed_contentRating_author",
+								"@type": "Organization"
+							}
+						},
+						"teaches": [
+							{
+								"@id": "_:PHP"
+							}
+						],
+						"isBasedOn": [],
+						"contributor": [],
+						"creativeWorkStatus": {
+							"@id": "_:performerIn2_workPerformed_creativeWorkStatus",
+							"@type": "DefinedTerm",
+							"name": "published",
+							"termCode": "published",
+							"description": "A work that is accepted and published",
+							"inDefinedTermSet": "http://onetonline.org"
+						},
+						"dateCreated": "2020",
+						"datePublished": "2020",
+						"educationalLevel": "DefinedTerm",
+						"sameAs": [
+							"URL of published article"
+						],
+						"about": [
+							{
+								"@type": "thing"
+							}
+						]
+					},
+					"location": {
+						"@id": "_:performerIn2_location",
+						"@type": "Place",
+						"address": {
+							"@type": "PostalAddress",
+							"addressCountry": "CA"
+						}
+					},
+					"name": "event/conference title",
+					"sameAs": "URL of the event/conference"
+				}
+			],
+			"sameAs": [
+				"https://twitter.com/johndoe",
+				"https://facebook.com/johndoe"
+			],
+			"colleague": [
+				{
+					"@id": "_:resume_colleague1_member"
+				}
+			],
+			"knows": [
+				{
+					"@type": "Person",
+					"@id": "_:knows1",
+					"givenName": "Ali"
+				}
+			],
+			"follows": [],
+			"knowsAbout": [],
+			"sibling": [],
+			"spouse": [],
+			"parent": [],
+			"worksFor": [],
+			"hasOccupation": [
+				{
+					"@id": "_:hasOccupation1",
+					"@type": "EmployeeRole",
+					"roleName": "Analyst",
+					"name": "Employee/Intern/Volunteer",
+					"description": "",
+					"baseSalary": [
+						{
+							"@id": "_:hasOccupation1_baseSalary1",
+							"@type": "MonetaryAmount",
+							"currency": "CAD",
+							"value": 150000
+						}
+					],
+					"hasOccupation": {
+						"@id": "_:hasOccupation1_hasOccupation",
+						"@type": "Occupation",
+						"name": "Occupation 1",
+						"estimatedSalary": {
+							"@id": "_:hasOccupation1_hasOccupation_estimatedSalary",
+							"@type": "MonetaryAmountDistribution",
+							"name": "estimate",
+							"duration": "P1Y",
+							"currency": "USD",
+							"percentile10": 72000,
+							"percentile25": 86000,
+							"median": 109000,
+							"percentile75": 120000,
+							"percentile90": 140000
+						},
+						"occupationLocation": {
+							"@id": "_:hasOccupation1_hasOccupation_occupationLocation",
+							"@type": "Country",
+							"name": "USA"
+						},
+						"occupationalCategory": {
+							"@id": "_:hasOccupation1_hasOccupation_occupationalCategory",
+							"@type": "CategoryCode",
+							"codeValue": "15-1251",
+							"name": "Computer Programmers",
+							"inCodeSet": "https://www.bls.gov/soc/2018/major_groups.htm"
+						},
+						"responsibilities": [
+							"Analysing systems"
+						],
+						"skills": [
+							{
+								"@id": "_:PHP"
+							}
+						]
+					},
+					"startDate": "2012",
+					"endDate": "2018",
+					"subjectOf": {
+						"@id": "_:hasOccupation1_subjectOf",
+						"@type": "BusinessEvent",
+						"name": "Interview & hiring process",
+						"inLanguage": [
+							{
+								"@id": "_:languageEnglish"
+							}
+						],
+						"location": {
+							"@id": "_:hasOccupation1_subjectOf_location",
+							"@type": "Place",
+							"address": {
+								"@id": "Company1Address"
+							}
+						},
+						"organizer": {
+							"@type": "Organization",
+							"@id": "Direction-X"
+						}
+					}
+				},
+				{
+					"@id": "_:hasOccupation2",
+					"@type": "OrganizationRole",
+					"roleName": "Driver",
+					"name": "Volunteer",
+					"description": "",
+					"baseSalary": {
+						"@id": "_:hasOccupation2_baseSalary",
+						"@type": "MonetaryAmount",
+						"currency": "CAD",
+						"value": 0
+					},
+					"hasOccupation": {
+						"@id": "_:hasOccupation2_hasOccupation",
+						"@type": "Occupation",
+						"name": "Occupation 2",
+						"estimatedSalary": {
+							"@id": "_:hasOccupation2_hasOccupation_estimatedSalary",
+							"@type": "MonetaryAmountDistribution",
+							"name": "estimate",
+							"duration": "P1Y",
+							"currency": "USD",
+							"percentile10": 72000,
+							"percentile25": 86000,
+							"median": 109000,
+							"percentile75": 120000,
+							"percentile90": 140000
+						},
+						"occupationLocation": {
+							"@id": "_:hasOccupation2_hasOccupation_occupationLocation",
+							"@type": "Country",
+							"name": "USA"
+						},
+						"occupationalCategory": {
+							"@id": "_:hasOccupation2_hasOccupation_occupationalCategory",
+							"@type": "CategoryCode",
+							"codeValue": "15-1251",
+							"name": "Computer Programmers",
+							"inCodeSet": "https://www.bls.gov/soc/2018/major_groups.htm"
+						},
+						"responsibilities": [
+							"Analysing systems"
+						],
+						"skills": [
+							{
+								"@id": "_:PHP"
+							}
+						]
+					},
+					"startDate": "2012",
+					"endDate": "2018",
+					"subjectOf": {
+						"@id": "_:hasOccupation2_subjectOf",
+						"@type": "BusinessEvent",
+						"name": "Interview process/hirign process",
+						"inLanguage": [
+							{
+								"@id": "_:languageEnglish"
+							}
+						],
+						"location": {
+							"@id": "_:hasOccupation2_subjectOf_location",
+							"@type": "Place",
+							"address": {
+								"@id": "Company1Address"
+							}
+						},
+						"organizer": {
+							"@id": "Direction-X",
+							"@type": "Organization"
+						}
+					}
+				}
+			]
+		},
+		{
+			"@id": "_:terms",
+			"@type": "skill:Terms",
+			"relatedTo": [
+				{
+					"@type": "Organization",
+					"@id": "Direction-X",
+					"name": "Direction X Corporation",
+					"location": {
+						"@id": "Company1Address"
+					}
+				},
+				{
+					"@type": "PostalAddress",
+					"@id": "Company1Address",
+					"addressLocality": "Denver",
+					"addressRegion": "CO",
+					"postalCode": "80209",
+					"streetAddress": "7 S. Broadway"
+				},
+				{
+					"@type": "PostalAddress",
+					"@id": "_:personal_Iran",
+					"addressCountry": "Iran"
+				},
+				{
+					"@type": "PostalAddress",
+					"@id": "_:personal_US",
+					"addressCountry": "United States of America"
+				},
+				{
+					"@type": "PostalAddress",
+					"@id": "_:personal_Canada",
+					"addressCountry": "Canada",
+					"streetAddress": "20 Malvin Dr",
+					"addressRegion": "Ontario",
+					"addressLocality": "Toronto",
+					"postalCode": "H1H0H0",
+					"contactType": "Current"
+				},
+				{
+					"@type": "Language",
+					"@id": "_:languageEnglish",
+					"name": "English",
+					"alternateName": "en"
+				}
+			]
+		}
+	]
+}
