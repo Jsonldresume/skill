@@ -807,63 +807,6 @@
 					"@id": "schema:Event"
 				}
 			]
-		},
-		{
-			"@id": "schema:memberOf",
-			"@type": "rdf:Property",
-			"rdfs:comment": "Memberships of the person, either professional or not",
-			"rdfs:label": "memberOf",
-			"schema:domainIncludes": {
-				"@id": "skill:Resume"
-			},
-			"schema:rangeIncludes": {
-				"@id": "skill:Membership"
-			}
-		},
-		{
-			"@id": "skill:Membership",
-			"@type": "rdfs:Class",
-			"rdfs:comment": "Membership details",
-			"rdfs:label": "Membership",
-			"rdfs:subClassOf": {
-				"@id": "schema:StructuredValue"
-			}
-		},
-		{
-			"@id": "skill:programDetails",
-			"@type": "rdf:Property",
-			"rdfs:label": "programDetails",
-			"rdfs:comment": "Details of program the person is part of",
-			"schema:domainIncludes": {
-				"@id": "skill:Membership"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:ProgramMembership"
-			}
-		},
-		{
-			"@id": "skill:awardedCredential",
-			"@type": "rdf:Property",
-			"rdfs:label": "awardedCredential",
-			"rdfs:comment": "Details of credential the program awarded the person",
-			"schema:domainIncludes": {
-				"@id": "skill:Membership"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:EducationalOccupationalCredential"
-			}
-		},
-		{
-			"@id": "skill:lastPaidFee",
-			"@type": "rdf:Property",
-			"rdfs:label": "lastPaidFee",
-			"rdfs:comment": "Last fee paid for this membership if fee-based",
-			"schema:domainIncludes": {
-				"@id": "skill:Membership"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:MonetaryAmount"
-			}
 		}
 	]
 }
