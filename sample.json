@@ -1,6 +1,6 @@
 {
 	"@context": [
-		"https://schema.jsonldresume.org/",
+		"https://jsonldresume.github.io/skill/context.json",
 		"https://schema.org/"
 	],
 	"@graph": [
