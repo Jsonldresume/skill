@@ -1,5 +1,8 @@
 {
-	"@context": "https://raw.githubusercontent.com/Jsonldresume/skill/main/context.json",
+	"@context": [
+		"https://schema.jsonldresume.org/",
+		"https://schema.org/"
+	],
 	"@graph": [
 		{
 			"@id": "https://johndoe.github.io/resume/",
@@ -264,6 +267,103 @@
 						},
 						"startDate": "2012",
 						"endDate": "2018"
+					}
+				}
+			],
+			"memberOf": [
+				{
+					"@id": "_:memberOf1",
+					"@type": "skill:Membership",
+					"programDetails": {
+						"@id": "_:memberOf1_programDetails",
+						"@type": "ProgramMembership",
+						"url": "https://www.pmac-agpc.ca/members",
+						"programName": "PMI",
+						"description": "This is project management professional group",
+						"hostingOrganization": {
+							"@id": "_:memberOf1_hostingOrganization",
+							"@type": "Organization",
+							"url": "https://www.pmi.org/",
+							"name": "Project Management Association of Canada (PMAC-AGPC)",
+							"address": {
+								"@id": "_:memberOf1_hostingOrganization_address",
+								"@type": "PostalAddress",
+								"addressCountry": "Canada",
+								"addressRegion": "Québec",
+								"addressLocality": "Gatineau",
+								"streetAddress": "unit 2-140 boulevard Gréber",
+								"postalCode": "J8T 6H5"
+							}
+						}
+					},
+					"awardedCredential": {
+						"@id": "_:memberOf1_partOf",
+						"@type": "EducationalOccupationalCredential",
+						"name": "Project Management Professional",
+						"alternateName": [
+							"PMI-PMP"
+						],
+						"educationalLevel": "skill:Advanced",
+						"expires": "2020-01-01",
+						"dateCreated": "2019-01-01",
+						"assesses": [
+							{
+								"@id": "_:Project Management",
+								"@type": "DefinedTerm",
+								"termCode": "Project Management",
+								"name": "Project Management",
+								"inDefinedTermSet": "https://en.wikipedia.org/wiki/Project_management"
+							}
+						]
+					},
+					"lastPaidFee": {
+						"@type": "MonetaryAmount",
+						"currency": "USD",
+						"value": "100",
+						"validFrom": "2020",
+						"validThrough": "2021"
+					}
+				},
+				{
+					"@id": "_:memberOf2",
+					"@type": "ProgramMembership",
+					"url": "https://www.fit4less.ca/members",
+					"programName": "Gold Membership",
+					"description": "This is Gym membership",
+					"hostingOrganization": {
+						"@id": "_:memberOf2_hostingOrganization",
+						"@type": "Organization",
+						"url": "https://www.fit4less.ca/",
+						"name": "Fit4Less",
+						"address": {
+							"@id": "_:memberOf2_hostingOrganization_address",
+							"@type": "PostalAddress",
+							"addressCountry": "Canada",
+							"addressRegion": "Québec",
+							"addressLocality": "Gatineau",
+							"streetAddress": "unit 2-140 boulevard Gréber",
+							"postalCode": "J8T 6H5"
+						}
+					},
+					"mainEntityOfPage": {
+						"@id": "_:memberOf2_mainEntityOfPage",
+						"@type": "ExercisePlan",
+						"name": "Gym",
+						"alternateName": [
+							"other names of this program"
+						],
+						"educationalLevel": "skill:Introductory",
+						"expires": "2021-01-01",
+						"dateCreated": "2020-01-01",
+						"assesses": [
+							{
+								"@id": "_:Fitness",
+								"@type": "DefinedTerm",
+								"termCode": "Fitness",
+								"name": "Fitness",
+								"inDefinedTermSet": "https://en.wikipedia.org/wiki/fitness"
+							}
+						]
 					}
 				}
 			],
@@ -631,92 +731,6 @@
 			"knowsLanguage": [
 				{
 					"@id": "_:languageEnglish"
-				}
-			],
-			"memberOf": [
-				{
-					"@id": "_:memberOf1",
-					"@type": "ProgramMembership",
-					"url": "https://www.pmac-agpc.ca/members",
-					"programName": "PMI",
-					"description": "This is project management professional group",
-					"hostingOrganization": {
-						"@id": "_:memberOf1_hostingOrganization",
-						"@type": "Organization",
-						"url": "https://www.pmi.org/",
-						"name": "Project Management Association of Canada (PMAC-AGPC)",
-						"address": {
-							"@id": "_:memberOf1_hostingOrganization_address",
-							"@type": "PostalAddress",
-							"addressCountry": "Canada",
-							"addressRegion": "Québec",
-							"addressLocality": "Gatineau",
-							"streetAddress": "unit 2-140 boulevard Gréber",
-							"postalCode": "J8T 6H5"
-						}
-					},
-					"mainEntityOfPage": {
-						"@id": "_:memberOf1_mainEntityOfPage",
-						"@type": "EducationalOccupationalCredential",
-						"name": "Project Management Professional",
-						"alternateName": [
-							"PMI-PMP"
-						],
-						"educationalLevel": "skill:Advanced",
-						"expires": "2020-01-01",
-						"dateCreated": "2019-01-01",
-						"assesses": [
-							{
-								"@id": "_:Project Management",
-								"@type": "DefinedTerm",
-								"termCode": "Project Management",
-								"name": "Project Management",
-								"inDefinedTermSet": "https://en.wikipedia.org/wiki/Project_management"
-							}
-						]
-					}
-				},
-				{
-					"@id": "_:memberOf2",
-					"@type": "ProgramMembership",
-					"url": "https://www.fit4less.ca/members",
-					"programName": "Gold Membership",
-					"description": "This is Gym membership",
-					"hostingOrganization": {
-						"@id": "_:memberOf2_hostingOrganization",
-						"@type": "Organization",
-						"url": "https://www.fit4less.ca/",
-						"name": "Fit4Less",
-						"address": {
-							"@id": "_:memberOf2_hostingOrganization_address",
-							"@type": "PostalAddress",
-							"addressCountry": "Canada",
-							"addressRegion": "Québec",
-							"addressLocality": "Gatineau",
-							"streetAddress": "unit 2-140 boulevard Gréber",
-							"postalCode": "J8T 6H5"
-						}
-					},
-					"mainEntityOfPage": {
-						"@id": "_:memberOf2_mainEntityOfPage",
-						"@type": "ExercisePlan",
-						"name": "Gym",
-						"alternateName": [
-							"other names of this program"
-						],
-						"educationalLevel": "skill:Introductory",
-						"expires": "2021-01-01",
-						"dateCreated": "2020-01-01",
-						"assesses": [
-							{
-								"@id": "_:Fitness",
-								"@type": "DefinedTerm",
-								"termCode": "Fitness",
-								"name": "Fitness",
-								"inDefinedTermSet": "https://en.wikipedia.org/wiki/fitness"
-							}
-						]
-					}
 				}
 			],
 			"interactionStatistic": [
@@ -1119,6 +1133,108 @@
 							"@type": "Organization"
 						}
 					}
+				}
+			],
+			"memberOf": [
+				{
+					"@id": "_:memberOf1",
+					"@type": "ProgramMembership",
+					"url": "https://www.pmac-agpc.ca/members",
+					"programName": "PMI",
+					"description": "This is project management professional group",
+					"hostingOrganization": {
+						"@id": "_:memberOf1_hostingOrganization",
+						"@type": "Organization",
+						"url": "https://www.pmi.org/",
+						"name": "Project Management Association of Canada (PMAC-AGPC)",
+						"address": {
+							"@id": "_:memberOf1_hostingOrganization_address",
+							"@type": "PostalAddress",
+							"addressCountry": "Canada",
+							"addressRegion": "Québec",
+							"addressLocality": "Gatineau",
+							"streetAddress": "unit 2-140 boulevard Gréber",
+							"postalCode": "J8T 6H5"
+						}
+					},
+					"mainEntityOfPage": {
+						"@id": "_:memberOf1_mainEntityOfPage",
+						"@type": "EducationalOccupationalCredential",
+						"name": "Project Management Professional",
+						"alternateName": [
+							"PMI-PMP"
+						],
+						"educationalLevel": "skill:Advanced",
+						"expires": "2020-01-01",
+						"dateCreated": "2019-01-01",
+						"assesses": [
+							{
+								"@id": "_:Project Management",
+								"@type": "DefinedTerm",
+								"termCode": "Project Management",
+								"name": "Project Management",
+								"inDefinedTermSet": "https://en.wikipedia.org/wiki/Project_management"
+							}
+						]
+					}
+				},
+				{
+					"@id": "_:memberOf2",
+					"@type": "ProgramMembership",
+					"url": "https://www.fit4less.ca/members",
+					"programName": "Gold Membership",
+					"description": "This is Gym membership",
+					"hostingOrganization": {
+						"@id": "_:memberOf2_hostingOrganization",
+						"@type": "Organization",
+						"url": "https://www.fit4less.ca/",
+						"name": "Fit4Less",
+						"address": {
+							"@id": "_:memberOf2_hostingOrganization_address",
+							"@type": "PostalAddress",
+							"addressCountry": "Canada",
+							"addressRegion": "Québec",
+							"addressLocality": "Gatineau",
+							"streetAddress": "unit 2-140 boulevard Gréber",
+							"postalCode": "J8T 6H5"
+						}
+					},
+					"mainEntityOfPage": {
+						"@id": "_:memberOf2_mainEntityOfPage",
+						"@type": "ExercisePlan",
+						"name": "Gym",
+						"alternateName": [
+							"other names of this program"
+						],
+						"educationalLevel": "skill:Introductory",
+						"expires": "2021-01-01",
+						"dateCreated": "2020-01-01",
+						"assesses": [
+							{
+								"@id": "_:Fitness",
+								"@type": "DefinedTerm",
+								"termCode": "Fitness",
+								"name": "Fitness",
+								"inDefinedTermSet": "https://en.wikipedia.org/wiki/fitness"
+							}
+						]
+					}
+				}
+			],
+			"seeks": [
+				{
+					"@type": "Demand",
+					"availabilityStarts": "2021-01-01",
+					"availabilityEnds": "",
+					"availableAtOrFrom": [
+						{
+							"@type": "Place"
+						}
+					],
+					"deliveryLeadTime": {
+						"@type": "QuantitativeValue"
+					},
+					"itemOffered": []
 				}
 			]
 		},
