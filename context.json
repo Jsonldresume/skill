@@ -1,6 +1,7 @@
 {
 	"@context": {
 		"@version": 1.1,
+		"@vocab": "https://schema.org/",
 		"rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
 		"rdfs": "https://www.w3.org/2000/01/rdf-schema#",
 		"schema": "https://schema.org/",
@@ -224,10 +225,13 @@
 			"@id": "skill:Resume",
 			"@type": "rdfs:Class",
 			"rdfs:comment": "A Resume.",
-			"rdfs:label": "Resume"
+			"rdfs:label": "Resume",
+			"rdfs:subClassOf": {
+				"@id": "schema:Intangible"
+			}
 		},
 		{
-			"@id": "schema:owner",
+			"@id": "skill:owner",
 			"@type": "rdf:Property",
 			"rdfs:comment": "Owner of this resume",
 			"rdfs:label": "owner",
@@ -239,7 +243,7 @@
 			}
 		},
 		{
-			"@id": "schema:sensoryConditions",
+			"@id": "skill:sensoryConditions",
 			"@type": "rdf:Property",
 			"rdfs:comment": "Sensory Conditions that might affect the working condition of the owner",
 			"rdfs:label": "sensoryConditions",
