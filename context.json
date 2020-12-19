@@ -345,7 +345,7 @@
 			"rdfs:label": "Non-Monetary"
 		},
 		{
-			"@id": "schema:award",
+			"@id": "skill:award",
 			"@type": "rdf:Property",
 			"rdfs:comment": "Awards won by or for this item.",
 			"rdfs:label": "award",
