@@ -453,7 +453,7 @@
 			}
 		},
 		{
-			"@id": "schema:eligibililtyToWork",
+			"@id": "skill:eligibililtyToWork",
 			"@type": "rdf:Property",
 			"rdfs:comment": "Permits that make the person or organization eligible to work in different cuntries",
 			"rdfs:label": "eligibililtyToWork",
@@ -498,7 +498,7 @@
 			}
 		},
 		{
-			"@id": "schema:lookingForJob",
+			"@id": "skill:lookingForJob",
 			"@type": "rdf:Property",
 			"rdfs:comment": "Job types that the person is looking for",
 			"rdfs:label": "lookingForJob",
@@ -588,7 +588,7 @@
 			}
 		},
 		{
-			"@id": "schema:workHistory",
+			"@id": "skill:workHistory",
 			"@type": "rdf:Property",
 			"rdfs:comment": "Work history of the person",
 			"rdfs:label": "workHistory",
@@ -686,7 +686,7 @@
 			}
 		},
 		{
-			"@id": "schema:colleague",
+			"@id": "skill:colleague",
 			"@type": "rdf:Property",
 			"rdfs:comment": "Colleague of the person",
 			"rdfs:label": "colleague",
