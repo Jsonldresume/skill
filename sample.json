@@ -1,8 +1,5 @@
 {
-	"@context": [
-		"https://jsonldresume.github.io/skill/context.json",
-		"https://schema.org/"
-	],
+	"@context": "https://jsonldresume.github.io/skill/context.json",
 	"@graph": [
 		{
 			"@id": "https://johndoe.github.io/resume/",
@@ -10,17 +7,21 @@
 			"owner": {
 				"@id": "https://johndoe.github.io"
 			},
-			"sensoryConditions": [
+			"healthCondition": [
 				{
-					"@id": "_:resume_sensoryConditions1",
-					"@type": "skill:SpecialCondition",
+					"@id": "_:resume_medicalCondition1",
+					"@type": "MedicalCondition",
 					"name": "deafness",
 					"description": "",
-					"startDate": "",
-					"endDate": "",
-					"result": [
-						"skill:ReducedHearing"
-					]
+					"signOrSymptom":[
+						{
+							"@type": "MedicalSignOrSymptom",
+							
+						}
+					],
+					"pathophysiology": "ReducedHearing",
+					"expectedPrognosis": "",
+					"naturalProgression": ""
 				}
 			],
 			"award": [
@@ -28,8 +29,13 @@
 					"@type": "skill:Award",
 					"@id": "_:resume_award1",
 					"title": "Award",
-					"date": "2020-01-01",
-					"awardedBy": [
+					"nativeLabel": "",
+					"location": {
+						"@type": "AdministrativeArea"
+					},
+					"awardRationale": "",
+					"awardedDate": "2020-01-01",
+					"conferredBy": [
 						{
 							"@type": "Organization",
 							"id": "Direction-X"
@@ -38,7 +44,7 @@
 							"@type": "Person"
 						}
 					],
-					"awardedForReason": [
+					"forWork": [
 						{
 							"@type": "CreativeWork",
 							"@id": ":_creativeWork1"
@@ -47,13 +53,23 @@
 							"@type": "Event"
 						}
 					],
-					"awardType": {
-						"@type": "DefinedTerm",
-						"termCode": "Monetary",
-						"name": "Nobel Prize",
-						"inDefinedTermSet": "https://en.wikipedia.org/wiki/List_of_jobs"
+					"classOfAward": "skill:Monetary",
+					"partOf": {
+						"@type": "skill:Award"
 					},
+					"togetherWith": [
+						{
+							"@type": "Person"
+						}
+					],
+					"assesses": [
+						{
+							"@id": "_:PHP"
+						}
+					],
+					"image": "",
 					"description": "",
+					"url": "",
 					"sameAs": ""
 				}
 			],
@@ -193,212 +209,135 @@
 						"url": "https://job-url-if-specific"
 					}
 				}
-			],
-			"workHistory": [
-				{
-					"@id": "_:workHistory1",
-					"@type": "skill:Employment",
-					"workOrganization": {
-						"@type": "Organization",
-						"@id": "Direction-X"
-					},
-					"workArea": {
-						"@type": "AdministrativeArea"
-					},
-					"remotePosition": false,
-					"inLanguage": [
-						{
-							"@id": "_:languageEnglish"
-						}
-					],
-					"workExample": [
-						{
-							"@id": "_resume_workExample1",
-							"@type": "CreativeWork"
-						}
-					],
-					"hasOccupation": {
-						"@type": "OrganizationRole",
-						"roleName": "Programmer",
-						"name": "Lead Programmer",
-						"description": "",
-						"baseSalary": {
-							"@id": "_:hasOccupation2_baseSalary",
-							"@type": "MonetaryAmount",
-							"currency": "CAD",
-							"value": 0
-						},
-						"hasOccupation": {
-							"@id": "_:hasOccupation2_hasOccupation",
-							"@type": "Occupation",
-							"name": "Occupation 2",
-							"estimatedSalary": {
-								"@id": "_:hasOccupation2_hasOccupation_estimatedSalary",
-								"@type": "MonetaryAmountDistribution",
-								"name": "estimate",
-								"duration": "P1Y",
-								"currency": "USD",
-								"percentile10": 72000,
-								"percentile25": 86000,
-								"median": 109000,
-								"percentile75": 120000,
-								"percentile90": 140000
-							},
-							"occupationLocation": {
-								"@id": "_:hasOccupation2_hasOccupation_occupationLocation",
-								"@type": "Country",
-								"name": "USA"
-							},
-							"occupationalCategory": {
-								"@id": "_:hasOccupation2_hasOccupation_occupationalCategory",
-								"@type": "CategoryCode",
-								"codeValue": "15-1251",
-								"name": "Computer Programmers",
-								"inCodeSet": "https://www.bls.gov/soc/2018/major_groups.htm"
-							},
-							"responsibilities": [
-								"Analysing systems"
-							],
-							"skills": [
-								{
-									"@id": "_:PHP"
-								}
-							]
-						},
-						"startDate": "2012",
-						"endDate": "2018"
-					}
-				}
-			],
-			"colleague": [
-				{
-					"@id": "_:resume_colleague1",
-					"@type": "skill:Colleague",
-					"member": {
-						"@id": "_:resume_colleague1_member",
-						"@type": "Person"
-					},
-					"teamedFor": [
-						{
-							"@type": "skill:Teammember",
-							"position": "skill:Manager or Text",
-							"work": {
-								"@id": "_resume_workExample1"
-							}
-						}
-					]
-				}
 			]
 		},
 		{
 			"@id": "https://johndoe.github.io",
 			"@type": "Person",
-			"givenName": [
-				"John"
-			],
-			"additionalName": [
-				"middle"
-			],
-			"familyName": [
-				"Doe"
-			],
-			"honorificPrefix": [
-				"Dr"
-			],
-			"birthDate": "--01-01",
-			"birthPlace": {
-				"@id": "_:birthPlace",
-				"@type": "Place",
-				"address": {
-					"@id": "_:personal_US"
-				}
-			},
-			"nationality": [
-				"US"
-			],
-			"height": {
-				"@id": "_:height",
-				"@type": "QuantitativeValue",
-				"unitCode": "ft",
-				"value": "7"
-			},
-			"weight": {
-				"@id": "_:weight",
-				"@type": "QuantitativeValue",
-				"unitCode": "kg",
-				"value": "68"
-			},
-			"contactPoint": [
-				{
-					"@id": "_:contactPoint1",
-					"@type": "ContactPoint",
-					"contactType": "Preferred",
-					"email": "john.Doe.primary@jsonldresume.org",
-					"telephone": "111-111-1111",
-					"availableLanguage": {
-						"@id": "_:languageEnglish"
+			"basicData": {
+				"givenName": [
+					{
+						"@value": "John",
+						"@language": "en"
 					},
-					"faxNumber": "100-000-0000",
-					"hoursAvailable": [
-						{
-							"@id": "_:contactPoint1_hoursAvailable1",
-							"@type": "OpeningHoursSpecification",
-							"opens": "09:00:00",
-							"closes": "20:00:00",
-							"dayOfWeek": [
-								"schema:Saturday",
-								"schema:Sunday"
-							],
-							"validFrom": "",
-							"validThrough": ""
-						}
-					]
-				},
-				{
-					"@id": "_:contactPoint2",
-					"@type": "ContactPoint",
-					"contactType": "Emergency",
-					"email": "john.Doe.emergency@jsonldresume.org",
-					"telephone": "222-222-2222",
-					"availableLanguage": {
-						"@id": "_:languageEnglish"
+					{
+						"@value": "जॉन",
+						"@language": "hi"
+					},
+					{
+						"@value": "约翰",
+						"@language": "zh"
+					},
+					{
+						"@value": "جان",
+						"@language": "ar-EG",
+						"@direction": "rtl"
 					}
-				}
-			],
-			"address": [
-				{
-					"@id": "_:pesonal_US"
+				],
+				"additionalName": [
+					"middle"
+				],
+				"familyName": [
+					"Doe"
+				],
+				"honorificPrefix": [
+					"Dr"
+				],
+				"birthDate": "--01-01",
+				"birthPlace": {
+					"@id": "_:birthPlace",
+					"@type": "Place",
+					"address": {
+						"@id": "_:personal_US"
+					}
 				},
-				{
-					"@id": "_:personal_Canada"
-				}
-			],
-			"gender": "Male",
-			"image": [
-				{
-					"@id": "_:image1",
-					"@type": "ImageObject",
-					"contentUrl": "https://static.wikia.nocookie.net/unidentified/images/7/73/UP_12012.JPG/revision/latest/scale-to-width-down/259?cb=20151216214935",
-					"abstract": "Image of person",
-					"associatedMedia": [
-						{
-							"@id": "_:image1_associatedMedia1",
-							"@type": "MediaObject",
-							"contentUrl": "https://static.projectmanagement.com/images/profile-photos/46843803.mov",
-							"abstract": "Video of person introducing themself e.g in a video resume"
+				"nationality": [
+					"US"
+				],
+				"height": {
+					"@id": "_:height",
+					"@type": "QuantitativeValue",
+					"unitCode": "ft",
+					"value": "7"
+				},
+				"weight": {
+					"@id": "_:weight",
+					"@type": "QuantitativeValue",
+					"unitCode": "kg",
+					"value": "68"
+				},
+				"contactPoint": [
+					{
+						"@id": "_:contactPoint1",
+						"@type": "ContactPoint",
+						"contactType": "Preferred",
+						"email": "john.Doe.primary@jsonldresume.org",
+						"telephone": "111-111-1111",
+						"availableLanguage": {
+							"@id": "_:languageEnglish"
+						},
+						"faxNumber": "100-000-0000",
+						"hoursAvailable": [
+							{
+								"@id": "_:contactPoint1_hoursAvailable1",
+								"@type": "OpeningHoursSpecification",
+								"opens": "09:00:00",
+								"closes": "20:00:00",
+								"dayOfWeek": [
+									"schema:Saturday",
+									"schema:Sunday"
+								],
+								"validFrom": "",
+								"validThrough": ""
+							}
+						]
+					},
+					{
+						"@id": "_:contactPoint2",
+						"@type": "ContactPoint",
+						"contactType": "Emergency",
+						"email": "john.Doe.emergency@jsonldresume.org",
+						"telephone": "222-222-2222",
+						"availableLanguage": {
+							"@id": "_:languageEnglish"
 						}
-					]
-				}
-			],
-			"jobTitle": [
-				{
-					"@id": "_:jobTitle1",
-					"@type": "DefinedTerm",
-					"termCode": "15-1211",
-					"name": "Computer Systems Analysts",
-					"inDefinedTermSet": "https://www.bls.gov/soc/2018/major_groups.htm"
-				}
-			],
+					}
+				],
+				"address": [
+					{
+						"@id": "_:pesonal_US"
+					},
+					{
+						"@id": "_:personal_Canada"
+					}
+				],
+				"gender": "Male",
+				"image": [
+					{
+						"@id": "_:image1",
+						"@type": "ImageObject",
+						"contentUrl": "https://static.wikia.nocookie.net/unidentified/images/7/73/UP_12012.JPG/revision/latest/scale-to-width-down/259?cb=20151216214935",
+						"abstract": "Image of person",
+						"associatedMedia": [
+							{
+								"@id": "_:image1_associatedMedia1",
+								"@type": "MediaObject",
+								"contentUrl": "https://static.projectmanagement.com/images/profile-photos/46843803.mov",
+								"abstract": "Video of person introducing themself e.g in a video resume"
+							}
+						]
+					}
+				],
+				"jobTitle": [
+					{
+						"@id": "_:jobTitle1",
+						"@type": "DefinedTerm",
+						"termCode": "15-1211",
+						"name": "Computer Systems Analysts",
+						"inDefinedTermSet": "https://www.bls.gov/soc/2018/major_groups.htm"
+					}
+				]
+			},
 			"hasCredential": [
 				{
 					"@id": "_:hasCredential1",
@@ -945,7 +884,7 @@
 			],
 			"colleague": [
 				{
-					"@id": "_:resume_colleague1_member"
+					"@type": "Person"
 				}
 			],
 			"knows": [
@@ -1018,7 +957,8 @@
 					"subjectOf": {
 						"@id": "_:hasOccupation1_subjectOf",
 						"@type": "BusinessEvent",
-						"name": "Interview & hiring process",
+						"name": "https://vocab.org/bio/#Employment",
+						"description": "The event of a person entering an occupational relationship with an employer.",
 						"inLanguage": [
 							{
 								"@id": "_:languageEnglish"
@@ -1034,7 +974,12 @@
 						"organizer": {
 							"@type": "Organization",
 							"@id": "Direction-X"
-						}
+						},
+						"workPerformed": [
+							{
+								"@type": "CreativeWork"
+							}
+						]
 					}
 				},
 				{
