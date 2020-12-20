@@ -2,42 +2,35 @@
 	"@context": {
 		"@version": 1.1,
 		"@vocab": "https://schema.org/",
+		"@base": "http://schema.jsonldresume.org/#",
+		"@import": "https://schema.org/version/latest/schemaorg-current-http.jsonld",
+		"@propagate": true,
+		"@language": "en",
+		"@direction": "ltr",
 		"rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
 		"rdfs": "https://www.w3.org/2000/01/rdf-schema#",
 		"schema": "https://schema.org/",
 		"xsd": "https://www.w3.org/2001/XMLSchema#",
 		"skill": "https://schema.jsonldresume.org/#",
+		"wiki": "https://www.wikidata.org/wiki/",
+		"basicData": "@nest",
 		"owner": {
-			"@id": "skill:owner",
-			"@type": "schema:Person"
+			"@id": "skill:owner"
 		},
-		"sensoryConditions": {
-			"@id": "skill:sensoryConditions",
-			"@type": "skill:SpecialCondition"
+		"healthCondition": {
+			"@id": "skill:healthCondition"
 		},
 		"award": {
-			"@id": "skill:award",
-			"@type": "skill:Award"
+			"@id": "skill:award"
 		},
 		"eligibililtyToWork": {
-			"@id": "skill:eligibililtyToWork",
-			"@type": "skill:WorkEligibility"
+			"@id": "skill:eligibililtyToWork"
 		},
 		"lookingForJob": {
-			"@id": "skill:lookingForJob",
-			"@type": "skill:JobApplication"
-		},
-		"workHistory": {
-			"@id": "skill:workHistory",
-			"@type": "skill:Employment"
-		},
-		"colleague": {
-			"@id": "skill:colleague",
-			"@type": "skill:Colleague"
+			"@id": "skill:lookingForJob"
 		},
 		"relatedTo": {
-			"@id": "skill:relatedTo",
-			"@type": "skill:Terms"
+			"@id": "skill:relatedTo"
 		}
 	},
 	"@graph": [
@@ -156,39 +149,6 @@
 			"rdfs:label": "Higher Levels Of Security Clearance"
 		},
 		{
-			"@id": "skill:SensoryConditionEffect",
-			"@type": "rdfs:Class",
-			"rdfs:comment": "Adverse effects that a sensory condition caused, for example caused by an accident, imposes on a person and require assistance or special care by another person or animal excluding those that require use of a device or tool,like eyeglasses, to be eliminated to a major extent",
-			"rdfs:label": "Sensory Condition Effect",
-			"rdfs:subClassOf": {
-				"@id": "schema:Enumeration"
-			}
-		},
-		{
-			"@id": "skill:ReducedWeightLifting",
-			"@type": "skill:SensoryConditionEffect",
-			"rdfs:comment": "Reduced ability to lift or move items while in a still position",
-			"rdfs:label": "Reduced Weight Lifting"
-		},
-		{
-			"@id": "skill:ReducedVision",
-			"@type": "skill:SensoryConditionEffect",
-			"rdfs:comment": "Reduced vision",
-			"rdfs:label": "Reduced Vision"
-		},
-		{
-			"@id": "skill:ReducedMobility",
-			"@type": "skill:SensoryConditionEffect",
-			"rdfs:comment": "Reduced mobility (run or walk)",
-			"rdfs:label": "Reduced Mobility"
-		},
-		{
-			"@id": "skill:ReducedHearing",
-			"@type": "skill:SensoryConditionEffect",
-			"rdfs:comment": "Reduced Hearing",
-			"rdfs:label": "Reduced Hearing"
-		},
-		{
 			"@id": "skill:LearningResourceType",
 			"@type": "rdfs:Class",
 			"rdfs:comment": "Formats that a Learning resource can be presented in those",
@@ -243,84 +203,18 @@
 			}
 		},
 		{
-			"@id": "skill:sensoryConditions",
+			"@id": "skill:healthCondition",
 			"@type": "rdf:Property",
-			"rdfs:comment": "Sensory Conditions that might affect the working condition of the owner",
-			"rdfs:label": "sensoryConditions",
+			"rdfs:comment": "Any state relevant to the health of an organism, including diseases and positive conditions.",
+			"rdfs:label": "healthCondition",
 			"schema:domainIncludes": {
 				"@id": "skill:Resume"
 			},
 			"schema:rangeIncludes": {
-				"@id": "skill:SpecialCondition"
-			}
-		},
-		{
-			"@id": "skill:SpecialCondition",
-			"@type": "rdfs:Class",
-			"rdfs:comment": "Special condition that has affectd a person's health permanently or temporarily",
-			"rdfs:label": "SpecialCondition",
-			"rdfs:subClassOf": {
-				"@id": "schema:StructuredValue"
-			}
-		},
-		{
-			"@id": "skill:name",
-			"@type": "rdf:Property",
-			"rdfs:label": "name",
-			"rdfs:comment": "name of special health condition that the person has",
-			"schema:domainIncludes": {
-				"@id": "skill:SpecialCondition"
+				"@id": "schema:MedicalCondition"
 			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Text"
-			}
-		},
-		{
-			"@id": "skill:description",
-			"@type": "rdf:Property",
-			"rdfs:label": "description",
-			"rdfs:comment": "description of special health condition that the person has",
-			"schema:domainIncludes": {
-				"@id": "skill:SpecialCondition"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Text"
-			}
-		},
-		{
-			"@id": "skill:startDate",
-			"@type": "rdf:Property",
-			"rdfs:label": "startDate",
-			"rdfs:comment": "Start date of special health condition that the person has. Can be a date in future or past",
-			"schema:domainIncludes": {
-				"@id": "skill:SpecialCondition"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Date"
-			}
-		},
-		{
-			"@id": "skill:endDate",
-			"@type": "rdf:Property",
-			"rdfs:label": "endDate",
-			"rdfs:comment": "End date of special health condition that the person has. Can be a date in future or past",
-			"schema:domainIncludes": {
-				"@id": "skill:SpecialCondition"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Date"
-			}
-		},
-		{
-			"@id": "skill:result",
-			"@type": "rdf:Property",
-			"rdfs:label": "result",
-			"rdfs:comment": "Result(effect on the body or mind) of special health condition that the person has.",
-			"schema:domainIncludes": {
-				"@id": "skill:SpecialCondition"
-			},
-			"schema:rangeIncludes": {
-				"@id": "skill:SensoryConditionEffect"
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P1050"
 			}
 		},
 		{
@@ -345,33 +239,48 @@
 			"rdfs:label": "Non-Monetary"
 		},
 		{
+			"@id": "skill:Award",
+			"@type": "rdfs:Class",
+			"rdfs:comment": "Any award. An award is something given to a person or a group of people to recognize excellence in a certain field; a certificate of excellence, for example trophies, titles, medals, badges, etc.",
+			"rdfs:label": "Award",
+			"rdfs:subClassOf": {
+				"@id": "schema:Thing"
+			}
+		},
+		{
 			"@id": "skill:award",
 			"@type": "rdf:Property",
-			"rdfs:comment": "Awards won by or for this item.",
+			"rdfs:comment": "Award(s) given to the person (or a group of people) to recognize their merit or excellence.",
 			"rdfs:label": "award",
 			"schema:domainIncludes": {
 				"@id": "skill:Resume"
 			},
 			"schema:rangeIncludes": {
 				"@id": "skill:Award"
+			},
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Q618779"
 			}
 		},
 		{
 			"@id": "skill:title",
 			"@type": "rdf:Property",
 			"rdfs:label": "title",
-			"rdfs:comment": "title of the award.",
+			"rdfs:comment": "published title of a work, such as a newspaper article, a literary work, a website, or a performance work",
 			"schema:domainIncludes": {
 				"@id": "skill:Award"
 			},
 			"schema:rangeIncludes": {
 				"@id": "schema:Text"
+			},
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P1476"
 			}
 		},
 		{
-			"@id": "skill:date",
+			"@id": "skill:awardedDate",
 			"@type": "rdf:Property",
-			"rdfs:label": "date",
+			"rdfs:label": "awardedDate",
 			"rdfs:comment": "date the award was or is planned to be won.",
 			"schema:domainIncludes": {
 				"@id": "skill:Award"
@@ -381,10 +290,60 @@
 			}
 		},
 		{
-			"@id": "skill:awardedBy",
+			"@id": "skill:togetherWith",
 			"@type": "rdf:Property",
-			"rdfs:label": "awardedBy",
-			"rdfs:comment": "the organization or person who awarded it.",
+			"rdfs:label": "togetherWith",
+			"rdfs:comment": "qualifier to specify the item that this property is shared with.",
+			"schema:domainIncludes": {
+				"@id": "skill:Award"
+			},
+			"schema:rangeIncludes": {
+				"@id": "schema:Person"
+			},
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P1706"
+			}
+		},
+		{
+			"@id": "skill:assesses",
+			"@type": "rdf:Property",
+			"rdfs:label": "assesses",
+			"rdfs:comment": "The item being described is intended to assess the competency or learning outcome defined by the referenced term.",
+			"schema:domainIncludes": {
+				"@id": "skill:Award"
+			},
+			"schema:rangeIncludes": [
+				{
+					"@id": "schema:DefinedTerm"
+				},
+				{
+					"@id": "schema:Text"
+				}
+			],
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P1706"
+			}
+		},
+		{
+			"@id": "skill:partOf",
+			"@type": "rdf:Property",
+			"rdfs:label": "partOf",
+			"rdfs:comment": "object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A). ",
+			"schema:domainIncludes": {
+				"@id": "skill:Award"
+			},
+			"schema:rangeIncludes": {
+				"@id": "skill:Award"
+			},
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P361"
+			}
+		},
+		{
+			"@id": "skill:conferredBy",
+			"@type": "rdf:Property",
+			"rdfs:label": "conferredby",
+			"rdfs:comment": "person or organization who awards a prize to or bestows an honor upon a recipient or that confers a degree",
 			"schema:domainIncludes": {
 				"@id": "skill:Award"
 			},
@@ -395,13 +354,16 @@
 				{
 					"@id": "schema:Organization"
 				}
-			]
+			],
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P1027"
+			}
 		},
 		{
-			"@id": "skill:awardedForReason",
+			"@id": "skill:forWork",
 			"@type": "rdf:Property",
-			"rdfs:label": "awardedForReason",
-			"rdfs:comment": "The creative work or event that was the main reason this awrd was given.",
+			"rdfs:label": "forWork",
+			"rdfs:comment": "qualifier of award received (P166) to specify the work that an award was given to the creator for",
 			"schema:domainIncludes": {
 				"@id": "skill:Award"
 			},
@@ -412,13 +374,16 @@
 				{
 					"@id": "schema:Event"
 				}
-			]
+			],
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P1686"
+			}
 		},
 		{
-			"@id": "skill:awardType",
+			"@id": "skill:classOfAward",
 			"@type": "rdf:Property",
-			"rdfs:label": "awardType",
-			"rdfs:comment": "The type of award",
+			"rdfs:label": "classOfAward",
+			"rdfs:comment": "class of award (order, medal etc.)",
 			"schema:domainIncludes": {
 				"@id": "skill:Award"
 			},
@@ -426,30 +391,54 @@
 				{
 					"@id": "skill:AwardType"
 				}
-			]
+			],
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Q38033430"
+			}
 		},
 		{
-			"@id": "skill:description",
+			"@id": "skill:awardRationale",
 			"@type": "rdf:Property",
-			"rdfs:label": "description",
-			"rdfs:comment": "description of the award.",
+			"rdfs:label": "awardRationale",
+			"rdfs:comment": "qualifier to add short citation explaining the official reason for awarding a prize to a winner by the person or organization who gives the award. Do not use this property to annotate or add comments about a person's award. No quote marked needed.",
 			"schema:domainIncludes": {
 				"@id": "skill:Award"
 			},
 			"schema:rangeIncludes": {
 				"@id": "schema:Text"
+			},
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P6208"
 			}
 		},
 		{
-			"@id": "skill:sameAs",
+			"@id": "skill:nativeLabel",
 			"@type": "rdf:Property",
-			"rdfs:label": "sameAs",
-			"rdfs:comment": "URL of the award.",
+			"rdfs:label": "nativeLabel",
+			"rdfs:comment": "label for item in its official or original language",
 			"schema:domainIncludes": {
 				"@id": "skill:Award"
 			},
 			"schema:rangeIncludes": {
-				"@id": "schema:URL"
+				"@id": "schema:Text"
+			},
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P1705"
+			}
+		},
+		{
+			"@id": "skill:location",
+			"@type": "rdf:Property",
+			"rdfs:label": "location",
+			"rdfs:comment": "location of the object, structure or event.",
+			"schema:domainIncludes": {
+				"@id": "skill:Award"
+			},
+			"schema:rangeIncludes": {
+				"@id": "schema:AdministrativeArea"
+			},
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Property:P276"
 			}
 		},
 		{
@@ -586,231 +575,6 @@
 			"schema:rangeIncludes": {
 				"@id": "schema:Thing"
 			}
-		},
-		{
-			"@id": "skill:workHistory",
-			"@type": "rdf:Property",
-			"rdfs:comment": "Work history of the person",
-			"rdfs:label": "workHistory",
-			"schema:domainIncludes": {
-				"@id": "skill:Resume"
-			},
-			"schema:rangeIncludes": {
-				"@id": "skill:Employment"
-			}
-		},
-		{
-			"@id": "skill:Employment",
-			"@type": "rdfs:Class",
-			"rdfs:comment": "Employment details of the work",
-			"rdfs:label": "Employment",
-			"rdfs:subClassOf": {
-				"@id": "schema:StructuredValue"
-			}
-		},
-		{
-			"@id": "skill:workOrganization",
-			"@type": "rdf:Property",
-			"rdfs:label": "workOrganization",
-			"rdfs:comment": "Organization the work took place at",
-			"schema:domainIncludes": {
-				"@id": "skill:Employment"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Organization"
-			}
-		},
-		{
-			"@id": "skill:workArea",
-			"@type": "rdf:Property",
-			"rdfs:label": "workArea",
-			"rdfs:comment": "Organization the work took place at",
-			"schema:domainIncludes": {
-				"@id": "skill:Employment"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:AdministrativeArea"
-			}
-		},
-		{
-			"@id": "skill:remotePosition",
-			"@type": "rdf:Property",
-			"rdfs:label": "remotePosition",
-			"rdfs:comment": "Identify if this was a remote position or not",
-			"schema:domainIncludes": {
-				"@id": "skill:Employment"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Boolean"
-			}
-		},
-		{
-			"@id": "skill:inLanguage",
-			"@type": "rdf:Property",
-			"rdfs:label": "inLanguage",
-			"rdfs:comment": "Identify the lnguage the tasks of the work was being  done",
-			"schema:domainIncludes": {
-				"@id": "skill:Employment"
-			},
-			"schema:rangeIncludes": [
-				{
-					"@id": "schema:Language"
-				},
-				{
-					"@id": "schema:Text"
-				}
-			]
-		},
-		{
-			"@id": "skill:workExample",
-			"@type": "rdf:Property",
-			"rdfs:label": "workExample",
-			"rdfs:comment": "Examples of work in this position",
-			"schema:domainIncludes": {
-				"@id": "skill:Employment"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:CreativeWork"
-			}
-		},
-		{
-			"@id": "skill:hasOccupation",
-			"@type": "rdf:Property",
-			"rdfs:label": "hasOccupation",
-			"rdfs:comment": "Occupation in this position",
-			"schema:domainIncludes": {
-				"@id": "skill:Employment"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:CreativeWork"
-			}
-		},
-		{
-			"@id": "skill:colleague",
-			"@type": "rdf:Property",
-			"rdfs:comment": "Colleague of the person",
-			"rdfs:label": "colleague",
-			"schema:domainIncludes": {
-				"@id": "skill:Resume"
-			},
-			"schema:rangeIncludes": {
-				"@id": "skill:Colleague"
-			}
-		},
-		{
-			"@id": "skill:Colleague",
-			"@type": "rdfs:Class",
-			"rdfs:comment": "Colleague details of the person",
-			"rdfs:label": "Colleague",
-			"rdfs:subClassOf": {
-				"@id": "schema:StructuredValue"
-			}
-		},
-		{
-			"@id": "skill:member",
-			"@type": "rdf:Property",
-			"rdfs:label": "member",
-			"rdfs:comment": "Person who was the colleague",
-			"schema:domainIncludes": {
-				"@id": "skill:Colleague"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Person"
-			}
-		},
-		{
-			"@id": "skill:teamedFor",
-			"@type": "rdf:Property",
-			"rdfs:label": "teamedFor",
-			"rdfs:comment": "The job, project, task or education that team was created around",
-			"schema:domainIncludes": {
-				"@id": "skill:Colleague"
-			},
-			"schema:rangeIncludes": {
-				"@id": "skill:Teammember"
-			}
-		},
-		{
-			"@id": "skill:Teammember",
-			"@type": "rdfs:Class",
-			"rdfs:comment": "teammember details",
-			"rdfs:label": "Teammember",
-			"rdfs:subClassOf": {
-				"@id": "schema:StructuredValue"
-			}
-		},
-		{
-			"@id": "skill:Position",
-			"@type": "rdfs:Class",
-			"rdfs:comment": "Position a teammember can have in a project or work towards the person from person's perspective. i.e. teammate is <Position> of the person.",
-			"rdfs:label": "Position",
-			"rdfs:subClassOf": {
-				"@id": "schema:Enumeration"
-			}
-		},
-		{
-			"@id": "skill:Manager",
-			"@type": "skill:Position",
-			"rdfs:comment": "Manager position in a team.",
-			"rdfs:label": "Manager"
-		},
-		{
-			"@id": "skill:DirectReport",
-			"@type": "skill:Position",
-			"rdfs:comment": "A person who directly reports to the person in a teammate.",
-			"rdfs:label": "Direct Report"
-		},
-		{
-			"@id": "skill:IndirectReport",
-			"@type": "skill:Position",
-			"rdfs:comment": "A person who indirectly reports to the person in a teammate.",
-			"rdfs:label": "Indirect Report"
-		},
-		{
-			"@id": "skill:Teammate",
-			"@type": "skill:Position",
-			"rdfs:comment": "A person who works with the person in the same team and is not mnager or direct report of the person",
-			"rdfs:label": "Teammate"
-		},
-		{
-			"@id": "skill:position",
-			"@type": "rdf:Property",
-			"rdfs:label": "position",
-			"rdfs:comment": "Position of the teammember",
-			"schema:domainIncludes": {
-				"@id": "skill:Teammember"
-			},
-			"schema:rangeIncludes": [
-				{
-					"@id": "schema:Text"
-				},
-				{
-					"@id": "skill:Position"
-				}
-			]
-		},
-		{
-			"@id": "skill:work",
-			"@type": "rdf:Property",
-			"rdfs:label": "work",
-			"rdfs:comment": "Work who was done with the teammember",
-			"schema:domainIncludes": {
-				"@id": "skill:Teammember"
-			},
-			"schema:rangeIncludes": [
-				{
-					"@id": "schema:Text"
-				},
-				{
-					"@id": "schema:CreativeWork"
-				},
-				{
-					"@id": "schema:Project"
-				},
-				{
-					"@id": "schema:Event"
-				}
-			]
 		}
 	]
 }
