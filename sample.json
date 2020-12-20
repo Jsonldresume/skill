@@ -27,14 +27,14 @@
 				{
 					"@type": "skill:Award",
 					"@id": "_:resume_award1",
-					"title": "Award",
-					"nativeLabel": "",
-					"location": {
+					"skill:title": "Award",
+					"skill:nativeLabel": "",
+					"skill:location": {
 						"@type": "AdministrativeArea"
 					},
-					"awardRationale": "",
-					"awardedDate": "2020-01-01",
-					"conferredBy": [
+					"skill:awardRationale": "",
+					"skill:awardedDate": "2020-01-01",
+					"skill:conferredBy": [
 						{
 							"@type": "Organization",
 							"id": "Direction-X"
@@ -43,7 +43,7 @@
 							"@type": "Person"
 						}
 					],
-					"forWork": [
+					"skill:forWork": [
 						{
 							"@type": "CreativeWork",
 							"@id": ":_creativeWork1"
@@ -52,16 +52,16 @@
 							"@type": "Event"
 						}
 					],
-					"classOfAward": "skill:Monetary",
-					"partOf": {
+					"skill:classOfAward": "skill:Monetary",
+					"skill:partOf": {
 						"@type": "skill:Award"
 					},
-					"togetherWith": [
+					"skill:togetherWith": [
 						{
 							"@type": "Person"
 						}
 					],
-					"assesses": [
+					"skill:assesses": [
 						{
 							"@id": "_:PHP"
 						}
@@ -76,8 +76,8 @@
 				{
 					"@id": "_:resume_eligibililtyToWork1",
 					"@type": "skill:WorkEligibility",
-					"securityClearance": "skill:NoClearance",
-					"throughPermit": {
+					"skill:securityClearance": "skill:NoClearance",
+					"skill:throughPermit": {
 						"@type": "GovernmentPermit",
 						"@id": "_:resume_eligibililtyToWork1_throughPermit",
 						"issuedThrough": {
@@ -105,10 +105,10 @@
 				{
 					"@id": "_:resume_lookingForJob1",
 					"@type": "skill:JobApplication",
-					"requireAdvacneNotice": "P14D",
-					"passiveJobSeeker": true,
-					"withCoverLetter": "This is cover letter that person writes for this job search",
-					"jobPosting": {
+					"skill:requireAdvacneNotice": "P14D",
+					"skill:passiveJobSeeker": true,
+					"skill:withCoverLetter": "This is cover letter that person writes for this job search",
+					"skill:jobPosting": {
 						"@id": "_:resume_jobPosting1",
 						"@type": "JobPosting",
 						"title": "Anayst",
