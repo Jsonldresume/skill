@@ -13,7 +13,6 @@
 		"xsd": "https://www.w3.org/2001/XMLSchema#",
 		"skill": "https://schema.jsonldresume.org/#",
 		"wiki": "https://www.wikidata.org/wiki/",
-		"basicData": "@nest",
 		"owner": {
 			"@id": "skill:owner"
 		},
