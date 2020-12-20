@@ -13,10 +13,9 @@
 					"@type": "MedicalCondition",
 					"name": "deafness",
 					"description": "",
-					"signOrSymptom":[
+					"signOrSymptom": [
 						{
-							"@type": "MedicalSignOrSymptom",
-							
+							"@type": "MedicalSignOrSymptom"
 						}
 					],
 					"pathophysiology": "ReducedHearing",
@@ -92,9 +91,10 @@
 						"validIn": [
 							{
 								"@id": "_:resume_eligibililtyToWork1_throughPermit_validIn1",
-								"@type": "AdministrativeArea",
+								"@type": "Country",
 								"address": {
-									"@id": "_:personal_Canada"
+									"@type": "PostalAddress",
+									"addressCountry": "US"
 								}
 							}
 						]
@@ -214,130 +214,128 @@
 		{
 			"@id": "https://johndoe.github.io",
 			"@type": "Person",
-			"basicData": {
-				"givenName": [
-					{
-						"@value": "John",
-						"@language": "en"
-					},
-					{
-						"@value": "जॉन",
-						"@language": "hi"
-					},
-					{
-						"@value": "约翰",
-						"@language": "zh"
-					},
-					{
-						"@value": "جان",
-						"@language": "ar-EG",
-						"@direction": "rtl"
-					}
-				],
-				"additionalName": [
-					"middle"
-				],
-				"familyName": [
-					"Doe"
-				],
-				"honorificPrefix": [
-					"Dr"
-				],
-				"birthDate": "--01-01",
-				"birthPlace": {
-					"@id": "_:birthPlace",
-					"@type": "Place",
-					"address": {
-						"@id": "_:personal_US"
-					}
+			"givenName": [
+				{
+					"@value": "John",
+					"@language": "en"
 				},
-				"nationality": [
-					"US"
-				],
-				"height": {
-					"@id": "_:height",
-					"@type": "QuantitativeValue",
-					"unitCode": "ft",
-					"value": "7"
+				{
+					"@value": "जॉन",
+					"@language": "hi"
 				},
-				"weight": {
-					"@id": "_:weight",
-					"@type": "QuantitativeValue",
-					"unitCode": "kg",
-					"value": "68"
+				{
+					"@value": "约翰",
+					"@language": "zh"
 				},
-				"contactPoint": [
-					{
-						"@id": "_:contactPoint1",
-						"@type": "ContactPoint",
-						"contactType": "Preferred",
-						"email": "john.Doe.primary@jsonldresume.org",
-						"telephone": "111-111-1111",
-						"availableLanguage": {
-							"@id": "_:languageEnglish"
-						},
-						"faxNumber": "100-000-0000",
-						"hoursAvailable": [
-							{
-								"@id": "_:contactPoint1_hoursAvailable1",
-								"@type": "OpeningHoursSpecification",
-								"opens": "09:00:00",
-								"closes": "20:00:00",
-								"dayOfWeek": [
-									"schema:Saturday",
-									"schema:Sunday"
-								],
-								"validFrom": "",
-								"validThrough": ""
-							}
-						]
-					},
-					{
-						"@id": "_:contactPoint2",
-						"@type": "ContactPoint",
-						"contactType": "Emergency",
-						"email": "john.Doe.emergency@jsonldresume.org",
-						"telephone": "222-222-2222",
-						"availableLanguage": {
-							"@id": "_:languageEnglish"
-						}
-					}
-				],
-				"address": [
-					{
-						"@id": "_:pesonal_US"
-					},
-					{
-						"@id": "_:personal_Canada"
-					}
-				],
-				"gender": "Male",
-				"image": [
-					{
-						"@id": "_:image1",
-						"@type": "ImageObject",
-						"contentUrl": "https://static.wikia.nocookie.net/unidentified/images/7/73/UP_12012.JPG/revision/latest/scale-to-width-down/259?cb=20151216214935",
-						"abstract": "Image of person",
-						"associatedMedia": [
-							{
-								"@id": "_:image1_associatedMedia1",
-								"@type": "MediaObject",
-								"contentUrl": "https://static.projectmanagement.com/images/profile-photos/46843803.mov",
-								"abstract": "Video of person introducing themself e.g in a video resume"
-							}
-						]
-					}
-				],
-				"jobTitle": [
-					{
-						"@id": "_:jobTitle1",
-						"@type": "DefinedTerm",
-						"termCode": "15-1211",
-						"name": "Computer Systems Analysts",
-						"inDefinedTermSet": "https://www.bls.gov/soc/2018/major_groups.htm"
-					}
-				]
+				{
+					"@value": "جان",
+					"@language": "ar-EG",
+					"@direction": "rtl"
+				}
+			],
+			"additionalName": [
+				"middle"
+			],
+			"familyName": [
+				"Doe"
+			],
+			"honorificPrefix": [
+				"Dr"
+			],
+			"birthDate": "--01-01",
+			"birthPlace": {
+				"@id": "_:birthPlace",
+				"@type": "Place",
+				"address": {
+					"@id": "_:personal_US"
+				}
 			},
+			"nationality": [
+				"US"
+			],
+			"height": {
+				"@id": "_:height",
+				"@type": "QuantitativeValue",
+				"unitCode": "ft",
+				"value": "7"
+			},
+			"weight": {
+				"@id": "_:weight",
+				"@type": "QuantitativeValue",
+				"unitCode": "kg",
+				"value": "68"
+			},
+			"contactPoint": [
+				{
+					"@id": "_:contactPoint1",
+					"@type": "ContactPoint",
+					"contactType": "Preferred",
+					"email": "john.Doe.primary@jsonldresume.org",
+					"telephone": "111-111-1111",
+					"availableLanguage": {
+						"@id": "_:languageEnglish"
+					},
+					"faxNumber": "100-000-0000",
+					"hoursAvailable": [
+						{
+							"@id": "_:contactPoint1_hoursAvailable1",
+							"@type": "OpeningHoursSpecification",
+							"opens": "09:00:00",
+							"closes": "20:00:00",
+							"dayOfWeek": [
+								"schema:Saturday",
+								"schema:Sunday"
+							],
+							"validFrom": "",
+							"validThrough": ""
+						}
+					]
+				},
+				{
+					"@id": "_:contactPoint2",
+					"@type": "ContactPoint",
+					"contactType": "Emergency",
+					"email": "john.Doe.emergency@jsonldresume.org",
+					"telephone": "222-222-2222",
+					"availableLanguage": {
+						"@id": "_:languageEnglish"
+					}
+				}
+			],
+			"address": [
+				{
+					"@id": "_:pesonal_US"
+				},
+				{
+					"@id": "_:personal_Canada"
+				}
+			],
+			"gender": "Male",
+			"image": [
+				{
+					"@id": "_:image1",
+					"@type": "ImageObject",
+					"contentUrl": "https://static.wikia.nocookie.net/unidentified/images/7/73/UP_12012.JPG/revision/latest/scale-to-width-down/259?cb=20151216214935",
+					"abstract": "Image of person",
+					"associatedMedia": [
+						{
+							"@id": "_:image1_associatedMedia1",
+							"@type": "MediaObject",
+							"contentUrl": "https://static.projectmanagement.com/images/profile-photos/46843803.mov",
+							"abstract": "Video of person introducing themself e.g in a video resume"
+						}
+					]
+				}
+			],
+			"jobTitle": [
+				{
+					"@id": "_:jobTitle1",
+					"@type": "DefinedTerm",
+					"termCode": "15-1211",
+					"name": "Computer Systems Analysts",
+					"inDefinedTermSet": "https://www.bls.gov/soc/2018/major_groups.htm"
+				}
+			],
 			"hasCredential": [
 				{
 					"@id": "_:hasCredential1",
@@ -934,7 +932,10 @@
 						"occupationLocation": {
 							"@id": "_:hasOccupation1_hasOccupation_occupationLocation",
 							"@type": "Country",
-							"name": "USA"
+							"address": {
+								"@type": "PostalAddress",
+								"addressCountry": "US"
+							}
 						},
 						"occupationalCategory": {
 							"@id": "_:hasOccupation1_hasOccupation_occupationalCategory",
