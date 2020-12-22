@@ -123,10 +123,13 @@
 		{
 			"@id": "skill:SecurityClearance",
 			"@type": "rdfs:Class",
-			"rdfs:comment": "Different types of a security clearance to access classified information issued by different organizations in a country, usually government, to a person",
+			"rdfs:comment": "status granted to individuals allowing them access to classified information or to restricted areas",
 			"rdfs:label": "Travel Permit",
 			"rdfs:subClassOf": {
 				"@id": "schema:Enumeration"
+			},
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Q161959"
 			}
 		},
 		{
@@ -186,7 +189,7 @@
 			"rdfs:comment": "A Resume.",
 			"rdfs:label": "Resume",
 			"rdfs:subClassOf": {
-				"@id": "schema:Intangible"
+				"@id": "schema:CreativeWork"
 			}
 		},
 		{
@@ -477,81 +480,15 @@
 			"@id": "skill:throughPermit",
 			"@type": "rdf:Property",
 			"rdfs:label": "throughPermit",
-			"rdfs:comment": "The permit through which the person is allowed to work or stay in a country.",
+			"rdfs:comment": "an identity document issued by a government or international treaty organization.",
 			"schema:domainIncludes": {
 				"@id": "skill:WorkEligibility"
 			},
 			"schema:rangeIncludes": {
 				"@id": "schema:GovernmentPermit"
-			}
-		},
-		{
-			"@id": "skill:lookingForJob",
-			"@type": "rdf:Property",
-			"rdfs:comment": "Job types that the person is looking for",
-			"rdfs:label": "lookingForJob",
-			"schema:domainIncludes": {
-				"@id": "skill:Resume"
 			},
-			"schema:rangeIncludes": {
-				"@id": "skill:JobApplication"
-			}
-		},
-		{
-			"@id": "skill:JobApplication",
-			"@type": "rdfs:Class",
-			"rdfs:comment": "Job application details from job seeker perspective",
-			"rdfs:label": "JobApplication",
-			"rdfs:subClassOf": {
-				"@id": "schema:StructuredValue"
-			}
-		},
-		{
-			"@id": "skill:requireAdvacneNotice",
-			"@type": "rdf:Property",
-			"rdfs:label": "requireAdvacneNotice",
-			"rdfs:comment": "The time an employer must give the person to allow that person enough time to start the job",
-			"schema:domainIncludes": {
-				"@id": "skill:JobApplication"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Duration"
-			}
-		},
-		{
-			"@id": "skill:passiveJobSeeker",
-			"@type": "rdf:Property",
-			"rdfs:label": "passiveJobSeeker",
-			"rdfs:comment": "Is job seeker passive in the serach?",
-			"schema:domainIncludes": {
-				"@id": "skill:JobApplication"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Boolean"
-			}
-		},
-		{
-			"@id": "skill:withCoverLetter",
-			"@type": "rdf:Property",
-			"rdfs:label": "withCoverLetter",
-			"rdfs:comment": "Cover letter for this resume",
-			"schema:domainIncludes": {
-				"@id": "skill:JobApplication"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Text"
-			}
-		},
-		{
-			"@id": "skill:jobPosting",
-			"@type": "rdf:Property",
-			"rdfs:label": "jobPosting",
-			"rdfs:comment": "Job posting details the person is looking for",
-			"schema:domainIncludes": {
-				"@id": "skill:JobApplication"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:JobPosting"
+			"schema:source": {
+				"@id": "https://www.wikidata.org/wiki/Q2616578"
 			}
 		},
 		{

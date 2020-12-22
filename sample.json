@@ -100,115 +100,6 @@
 						]
 					}
 				}
-			],
-			"lookingForJob": [
-				{
-					"@id": "_:resume_lookingForJob1",
-					"@type": "skill:JobApplication",
-					"skill:requireAdvacneNotice": "P14D",
-					"skill:passiveJobSeeker": true,
-					"skill:withCoverLetter": "This is cover letter that person writes for this job search",
-					"skill:jobPosting": {
-						"@id": "_:resume_jobPosting1",
-						"@type": "JobPosting",
-						"title": "Anayst",
-						"jobLocation": [
-							{
-								"@id": "_:resume_lookingForJob1_jobPosting1",
-								"@type": "Place",
-								"address": {
-									"@id": "_:resume_lookingForJob1_jobPosting1_address1",
-									"@type": "PostalAddress",
-									"addressCountry": "CA",
-									"addressRegion": "Ontario",
-									"addressLocality": "Toronto"
-								}
-							}
-						],
-						"baseSalary": {
-							"@id": "_:resume_jobPosting1_baseSalary",
-							"@type": "MonetaryAmount",
-							"currency": "CAD",
-							"minValue": 50000,
-							"maxValue": 100000
-						},
-						"employmentType": [
-							"full-time"
-						],
-						"hiringOrganization": [
-							{
-								"@id": "_:resume_jobPosting1_hiringOrganization1",
-								"@type": "Organization",
-								"description": "name or size or industry you want to be employed at",
-								"location": {
-									"@id": "_:resume_jobPosting1_hiringOrganization1_address1",
-									"@type": "PostalAddress",
-									"addressCountry": "CA",
-									"addressRegion": "Ontario",
-									"addressLocality": "Toronto"
-								},
-								"nonprofitStatus": "Nonprofit",
-								"numberOfEmployees": {
-									"@id": "_:resume_jobPosting1_hiringOrganization1_numberOfEmployees",
-									"@type": "QuantitativeValue",
-									"minValue": 5,
-									"maxValue": 10,
-									"unitText": "person"
-								},
-								"review": {
-									"@id": "_:resume_jobPosting1_hiringOrganization1_review",
-									"@type": "Review",
-									"reviewBody": [
-										"Glassdoor",
-										"Indeed"
-									],
-									"reviewRating": {
-										"@id": "_:resume_jobPosting1_hiringOrganization1_review_reviewRating",
-										"@type": "Rating",
-										"worstRating": 1,
-										"bestRating": 5,
-										"ratingExplanation": "rating the company received"
-									}
-								},
-								"legalName": "",
-								"name": ""
-							}
-						],
-						"industry": [
-							{
-								"@id": "_:resume_jobPosting1_industry1",
-								"@type": "DefinedTerm",
-								"termCode": "C1934-GL",
-								"name": "Global Cosmetics Manufacturing",
-								"inDefinedTermSet": "https://www.ibisworld.com/global/list-of-industries/"
-							}
-						],
-						"jobStartDate": "2021-01-01",
-						"occupationalCategory": [
-							{
-								"@id": "_:resume_jobPosting1_occupationalCategory1",
-								"@type": "CategoryCode",
-								"codeValue": "15-1251",
-								"name": "Computer Programmers",
-								"inCodeSet": "https://www.bls.gov/soc/2018/major_groups.htm"
-							}
-						],
-						"physicalRequirement": [
-							{
-								"@id": "_:resume_jobPosting1_physicalRequirement1",
-								"@type": "CategoryCode",
-								"codeValue": "15-1251",
-								"name": "Coaching and Developing Others ",
-								"inCodeSet": "https://www.onetonline.org/"
-							}
-						],
-						"workHours": [
-							"night shift",
-							"8am-12pm"
-						],
-						"url": "https://job-url-if-specific"
-					}
-				}
 			]
 		},
 		{
@@ -574,6 +465,125 @@
 				}
 			],
 			"interactionStatistic": [
+				{
+					"@id": "_:JobSearch1",
+					"@type": "InteractionCounter",
+					"interactionType": [
+						{
+							"@id": "_:JobSearch1_interactionType1",
+							"@type": "SearchAction",
+							"query": "Searching for new job",
+							"actionStatus": "PotentialActionStatus",
+							"startTime": "2020-01-01",
+							"endTime": "2021-01-01",
+							"instrument": {
+								"@type": "Message",
+								"abstract": "This is headline",
+								"description": "This is cover letter"
+							},
+							"object": {
+								"@id": "_:JobSearch1_interactionType1_jobPosting1",
+								"@type": "JobPosting",
+								"title": "Anayst",
+								"jobLocation": [
+									{
+										"@id": "_:resume_lookingForJob1_jobPosting1",
+										"@type": "Place",
+										"address": {
+											"@id": "_:resume_lookingForJob1_jobPosting1_address1",
+											"@type": "PostalAddress",
+											"addressCountry": "CA",
+											"addressRegion": "Ontario",
+											"addressLocality": "Toronto"
+										}
+									}
+								],
+								"baseSalary": {
+									"@id": "_:resume_jobPosting1_baseSalary",
+									"@type": "MonetaryAmount",
+									"currency": "CAD",
+									"minValue": 50000,
+									"maxValue": 100000
+								},
+								"employmentType": [
+									"full-time"
+								],
+								"hiringOrganization": [
+									{
+										"@id": "_:resume_jobPosting1_hiringOrganization1",
+										"@type": "Organization",
+										"description": "name or size or industry you want to be employed at",
+										"location": {
+											"@id": "_:resume_jobPosting1_hiringOrganization1_address1",
+											"@type": "PostalAddress",
+											"addressCountry": "CA",
+											"addressRegion": "Ontario",
+											"addressLocality": "Toronto"
+										},
+										"nonprofitStatus": "Nonprofit",
+										"numberOfEmployees": {
+											"@id": "_:resume_jobPosting1_hiringOrganization1_numberOfEmployees",
+											"@type": "QuantitativeValue",
+											"minValue": 5,
+											"maxValue": 10,
+											"unitText": "person"
+										},
+										"review": {
+											"@id": "_:resume_jobPosting1_hiringOrganization1_review",
+											"@type": "Review",
+											"reviewBody": [
+												"Glassdoor",
+												"Indeed"
+											],
+											"reviewRating": {
+												"@id": "_:resume_jobPosting1_hiringOrganization1_review_reviewRating",
+												"@type": "Rating",
+												"worstRating": 1,
+												"bestRating": 5,
+												"ratingExplanation": "rating the company received"
+											}
+										},
+										"legalName": "",
+										"name": ""
+									}
+								],
+								"industry": [
+									{
+										"@id": "_:resume_jobPosting1_industry1",
+										"@type": "DefinedTerm",
+										"termCode": "C1934-GL",
+										"name": "Global Cosmetics Manufacturing",
+										"inDefinedTermSet": "https://www.ibisworld.com/global/list-of-industries/"
+									}
+								],
+								"jobStartDate": "2021-01-01 (or with a 2-week notice)",
+								"occupationalCategory": [
+									{
+										"@id": "_:resume_jobPosting1_occupationalCategory1",
+										"@type": "CategoryCode",
+										"codeValue": "15-1251",
+										"name": "Computer Programmers",
+										"inCodeSet": "https://www.bls.gov/soc/2018/major_groups.htm"
+									}
+								],
+								"physicalRequirement": [
+									{
+										"@id": "_:resume_jobPosting1_physicalRequirement1",
+										"@type": "CategoryCode",
+										"codeValue": "15-1251",
+										"name": "Coaching and Developing Others ",
+										"inCodeSet": "https://www.onetonline.org/"
+									}
+								],
+								"workHours": [
+									"night shift",
+									"8am-12pm"
+								],
+								"url": "https://job-url-if-specific"
+							}
+						}
+					]
+				},
 				{
 					"@id": "_:interactionStatistic1",
 					"@type": "InteractionCounter",
