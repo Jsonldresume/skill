@@ -19,6 +19,12 @@ And the JSON-LD Resume schema is available from:
 ```js
 require("resumeldresume").skill;
 ```
+
+Or without any installation by using the skill context for your json-ld object:
+
+```js
+"@context": "https://jsonldresume.github.io/skill/context.json",
+```
 ### Contribute
 
 We encourage anyone who's interested in participating in the formation of this standard to join the discussions [here on GitHub](https://github.com/jsonldresume/skill/issues). Also feel free to fork this project and submit new ideas to add to the JSON-LD Resume Schema standard. To make sure all formatting is kept in check, please install the [EditorConfig plugin](http://editorconfig.org/) for your editor of choice.
