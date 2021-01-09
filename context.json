@@ -13,9 +13,6 @@
 		"xsd": "https://www.w3.org/2001/XMLSchema#",
 		"skill": "https://schema.jsonldresume.org/#",
 		"wiki": "https://www.wikidata.org/wiki/",
-		"owner": {
-			"@id": "skill:owner"
-		},
 		"healthCondition": {
 			"@id": "skill:healthCondition"
 		},
@@ -33,6 +30,15 @@
 		}
 	},
 	"@graph": [
+		{
+			"@id": "skill:Resume",
+			"@type": "rdfs:Class",
+			"rdfs:comment": "A Resume.",
+			"rdfs:label": "Resume",
+			"rdfs:subClassOf": {
+				"@id": "schema:CreativeWork"
+			}
+		},
 		{
 			"@id": "skill:Level",
 			"@type": "rdfs:Class",
@@ -182,27 +188,6 @@
 			"@type": "skill:LearningResourceType",
 			"rdfs:comment": "Practical lab or internship based course",
 			"rdfs:label": "Work-Centric"
-		},
-		{
-			"@id": "skill:Resume",
-			"@type": "rdfs:Class",
-			"rdfs:comment": "A Resume.",
-			"rdfs:label": "Resume",
-			"rdfs:subClassOf": {
-				"@id": "schema:CreativeWork"
-			}
-		},
-		{
-			"@id": "skill:owner",
-			"@type": "rdf:Property",
-			"rdfs:comment": "Owner of this resume",
-			"rdfs:label": "owner",
-			"schema:domainIncludes": {
-				"@id": "skill:Resume"
-			},
-			"schema:rangeIncludes": {
-				"@id": "schema:Person"
-			}
 		},
 		{
 			"@id": "skill:healthCondition",

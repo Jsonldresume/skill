@@ -28,7 +28,7 @@
 		{
 			"@id": "https://johndoe.github.io/resume/",
 			"@type": "skill:Resume",
-			"owner": {
+			"author": {
 				"@id": "https://johndoe.github.io"
 			},
 			"healthCondition": [
