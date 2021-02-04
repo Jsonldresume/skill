@@ -6,7 +6,8 @@ Skill is the name of JSONLD-Schema to define and validate our proposed resume js
 [![Latest Status](https://github.com/jsonldresume/skill/workflows/Latest/badge.svg)](https://github.com/vanillawc/wc-template/actions)
 [![Release Status](https://github.com/jsonldresume/skill/workflows/Release/badge.svg)](https://github.com/vanillawc/wc-template/actions)
 
-Standard, Specification, Schema and sample
+Standard, Specification, Schema and sample. Visit [jsonldresume.org](https://jsonldresume.org) for more information. 
+Also check "lab-web" and "resume" repositories to see it in action.
 
 ### Getting started
 
