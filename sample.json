@@ -184,6 +184,7 @@
 				{
 					"@id": "_:contactPoint1",
 					"@type": "ContactPoint",
+					"description": "",
 					"contactType": "Preferred",
 					"email": "john.Doe.primary@jsonldresume.org",
 					"telephone": "111-111-1111",
@@ -217,12 +218,33 @@
 					}
 				}
 			],
+			"description": "headline",
 			"address": [
 				{
-					"@id": "_:pesonal_US"
+					"@type": "PostalAddress",
+					"@id": "_:personal_US",
+					"addressCountry": "United States of America",
+					"hoursAvailable": {
+						"@id": "_:personal_US#hoursAvailable",
+						"@type": "OpeningHoursSpecification",
+						"validThrough": "2099-01-01"
+					}
 				},
 				{
-					"@id": "_:personal_Canada"
+					"@type": "PostalAddress",
+					"@id": "_:personal_Canada",
+					"addressCountry": "Canada",
+					"streetAddress": "20 Malvin Dr",
+					"addressRegion": "Ontario",
+					"addressLocality": "Toronto",
+					"postalCode": "H1H0H0",
+					"contactType": "Current",
+					"hoursAvailable": {
+						"@id": "_:personal_US#hoursAvailable",
+						"@type": "OpeningHoursSpecification",
+						"validThrough": "2099-01-01"
+					},
+					"url": ""
 				}
 			],
 			"gender": "Male",
@@ -277,11 +299,21 @@
 						}
 					],
 					"dateCreated": "2010-05--",
+					"teaches": [
+						{
+							"@id": "_:PHP",
+							"@type": "DefinedTerm",
+							"termCode": "PHP",
+							"name": "PHP",
+							"inDefinedTermSet": "https://en.wikipedia.org/wiki/List_of_programming_languages"
+						}
+					],
 					"about": {
 						"@id": "_:hasCredential1_about",
 						"@type": "EducationalOccupationalProgram",
 						"name": "Master of Science in Electrical Engineering at University of Colorado at Boulder",
 						"description": "Master of Science in Electrical Engineering at University of Colorado at Boulder",
+						"educationalCredentialAwarded": "Computer Science",
 						"identifier": {
 							"@id": "_:hasCredential1_about_identifier",
 							"@type": "PropertyValue",
@@ -485,13 +517,17 @@
 			],
 			"knowsLanguage": [
 				{
-					"@id": "_:languageEnglish"
+					"@type": "Language",
+					"@id": "_:languageEnglish",
+					"name": "English",
+					"alternateName": "en"
 				}
 			],
 			"interactionStatistic": [
 				{
-					"@id": "_:JobSearch1",
+					"@id": "_:JobSearch",
 					"@type": "InteractionCounter",
+					"disambiguatingDescription": "job Search",
 					"interactionType": [
 						{
 							"@id": "_:JobSearch1_interactionType1",
@@ -609,8 +645,9 @@
 					]
 				},
 				{
-					"@id": "_:interactionStatistic1",
+					"@id": "_:Publication",
 					"@type": "InteractionCounter",
+					"disambiguatingDescription": "Publication",
 					"interactionService": {
 						"@id": "_:interactionStatistic1_interactionService",
 						"@type": "WebSite",
@@ -730,6 +767,38 @@
 							]
 						}
 					]
+				},
+				{
+					"@id": "_:Reference",
+					"@type": "InteractionCounter",
+					"disambiguatingDescription": "Reference",
+					"interactionType": {
+						"@id": "_:Reference_InteractionCounter",
+						"@type": "AssessAction",
+						"participant": {
+							"@id": "_:Referer",
+							"@type": "Person"
+						},
+						"result": [
+							{
+								"@id": "_:Skill",
+								"@type": "Review",
+								"itemReviewed": {
+									"@type": "DefinedTerm",
+									"@id": "_:PHP"
+								},
+								"reviewAspect": [
+									"Logic"
+								],
+								"reviewRating": {
+									"@type": "Rating",
+									"ratingValue": "5",
+									"bestRating": "0",
+									"ratingExplanation": "Very professional"
+								}
+							}
+						]
+					}
 				}
 			],
 			"performerIn": [
@@ -887,26 +956,6 @@
 							"streetAddress": "unit 2-140 boulevard Gréber",
 							"postalCode": "J8T 6H5"
 						}
-					},
-					"mainEntityOfPage": {
-						"@id": "_:memberOf2_mainEntityOfPage",
-						"@type": "ExercisePlan",
-						"name": "Gym",
-						"alternateName": [
-							"other names of this program"
-						],
-						"educationalLevel": "skill:Introductory",
-						"expires": "2021-01-01",
-						"dateCreated": "2020-01-01",
-						"assesses": [
-							{
-								"@id": "_:Fitness",
-								"@type": "DefinedTerm",
-								"termCode": "Fitness",
-								"name": "Fitness",
-								"inDefinedTermSet": "https://en.wikipedia.org/wiki/fitness"
-							}
-						]
 					}
 				}
 			],
@@ -932,6 +981,17 @@
 			"spouse": [],
 			"parent": [],
 			"worksFor": [],
+			"award": [
+				"Award"
+			],
+			"identifier": [
+				{
+					"@id": "_:Extra1",
+					"@type": "PropertyValue",
+					"propertyID": "",
+					"value": ""
+				}
+			],
 			"hasOccupation": [
 				{
 					"@id": "_:hasOccupation1",
@@ -1008,7 +1068,16 @@
 						},
 						"organizer": {
 							"@type": "Organization",
-							"@id": "Direction-X"
+							"@id": "Direction-X",
+							"name": "Direction X Corporation",
+							"location": {
+								"@type": "PostalAddress",
+								"@id": "Company1Address",
+								"addressLocality": "Denver",
+								"addressRegion": "CO",
+								"postalCode": "80209",
+								"streetAddress": "7 S. Broadway"
+							}
 						},
 						"workPerformed": [
 							{
@@ -1094,65 +1163,22 @@
 			"seeks": [
 				{
 					"@type": "Demand",
+					"description": "Looking for a challenging role in a reputable organization to utilize my technical, database, and management skills for the growth of the organization as well as to enhance my knowledge about new and emerging trends in the IT sector.",
 					"availabilityStarts": "2021-01-01",
 					"availabilityEnds": "",
-					"availableAtOrFrom": [
-						{
-							"@type": "Place"
+					"availableAtOrFrom": {
+						"@type": "Place",
+						"address": {
+							"@type": "PostalAddress",
+							"addressCountry": "Canada",
+							"addressRegion": "Ontario",
+							"addressLocality": "Toronto"
 						}
-					],
+					},
 					"deliveryLeadTime": {
 						"@type": "QuantitativeValue"
 					},
 					"itemOffered": []
-				}
-			]
-		},
-		{
-			"@id": "_:terms",
-			"@type": "skill:Terms",
-			"relatedTo": [
-				{
-					"@type": "Organization",
-					"@id": "Direction-X",
-					"name": "Direction X Corporation",
-					"location": {
-						"@id": "Company1Address"
-					}
-				},
-				{
-					"@type": "PostalAddress",
-					"@id": "Company1Address",
-					"addressLocality": "Denver",
-					"addressRegion": "CO",
-					"postalCode": "80209",
-					"streetAddress": "7 S. Broadway"
-				},
-				{
-					"@type": "PostalAddress",
-					"@id": "_:personal_Iran",
-					"addressCountry": "Iran"
-				},
-				{
-					"@type": "PostalAddress",
-					"@id": "_:personal_US",
-					"addressCountry": "United States of America"
-				},
-				{
-					"@type": "PostalAddress",
-					"@id": "_:personal_Canada",
-					"addressCountry": "Canada",
-					"streetAddress": "20 Malvin Dr",
-					"addressRegion": "Ontario",
-					"addressLocality": "Toronto",
-					"postalCode": "H1H0H0",
-					"contactType": "Current"
-				},
-				{
-					"@type": "Language",
-					"@id": "_:languageEnglish",
-					"name": "English",
-					"alternateName": "en"
 				}
 			]
 		}
